@@ -16,6 +16,8 @@
   * Java 8 이상의 JDK 환경
   * [Py4J](https://www.py4j.org/install.html), 0.10.8 이상
     * `pip`를 이용하여 간편하게 설치(`pip install py4j`)하는 것을 권장합니다.
+  * Python 3 이상
+    * Python 3.6 이상을 사용하는 것을 권장합니다.
 
 ### 설치방법
 
