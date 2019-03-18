@@ -9,6 +9,9 @@ version_filename = convert_path(os.path.join('PyKomoran', '__version__.py'))
 with open(version_filename) as version_file:
     exec(version_file.read(), version_properties)
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup_requires = [
 ]
 
@@ -39,8 +42,23 @@ setup(
     contact                 = version_properties['__author__'],
     contact_email           = version_properties['__author_email__'],
     license                 = version_properties['__license__'],
-    classifiers             = version_properties['__classifiers__'],
+    classifiers             = [
+                                "Development Status :: 4 - Beta",
+                                "Environment :: Console",
+                                "Intended Audience :: Developers",
+                                "Intended Audience :: Education",
+                                "Intended Audience :: Information Technology",
+                                "Intended Audience :: Science/Research",
+                                "License :: OSI Approved :: Apache Software License",
+                                "Natural Language :: Korean",
+                                "Programming Language :: Java",
+                                "Programming Language :: Python :: 3 :: Only",
+                                "Topic :: Scientific/Engineering :: Information Analysis",
+                                "Topic :: Software Development :: Libraries :: Java Libraries",
+                                "Topic :: Text Processing :: Linguistic"
+                            ],
     download_url            = version_properties['__download_url__'],
+    long_description        = long_description,
     packages                = find_packages(),
     install_requires        = install_requires,
     setup_requires          = setup_requires,
