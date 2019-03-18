@@ -5,7 +5,10 @@ import kr.co.shineware.nlp.komoran.core.Komoran;
 import kr.co.shineware.nlp.komoran.model.KomoranResult;
 import kr.co.shineware.nlp.komoran.model.Token;
 import kr.co.shineware.util.common.model.Pair;
+import py4j.GatewayServer;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,7 +20,25 @@ public class KomoranEntryPoint {
     }
 
     public void init(String modelPath) {
-        komoran = new Komoran(modelPath);
+        if (!new File(modelPath).exists()) {
+            return;
+        }
+
+        try {
+            komoran = new Komoran(modelPath);
+        }
+        // TODO: Modify Komoran throws FileNotFoundException
+        catch (Exception e) {
+            // FileNotFoundException => Invalid model path
+        }
+    }
+
+    public boolean isInitialized() {
+        if (komoran instanceof Komoran) {
+            return true;
+        }
+
+        return false;
     }
 
     public void initByModel(DEFAULT_MODEL modelType) {
@@ -83,10 +104,14 @@ public class KomoranEntryPoint {
     }
 
     public static void main(String[] args) {
+        // Sample code for testing
         KomoranEntryPoint komoranEntryPoint = new KomoranEntryPoint();
-        komoranEntryPoint.initByModel(DEFAULT_MODEL.FULL);
+        komoranEntryPoint.initByModel(DEFAULT_MODEL.LIGHT);
         komoranEntryPoint.analyze("① 대한민국은 민주공화국이다. ② 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.");
         System.out.println(komoranEntryPoint.getTokenList());
+
+//        // Codes below are for debugging
+//        GatewayServer gatewayServer = new GatewayServer(new KomoranEntryPoint(), 25335);
+//        gatewayServer.start();
     }
 }
-
