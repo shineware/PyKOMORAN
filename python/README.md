@@ -21,15 +21,16 @@
 
 * You can install PyKomoran using `pip`.
 
-  ```sh
-    pip install PyKomoran
-  ```
+```bash
+  pip install PyKomoran
+```
 
 * Or, just clone this repository and copy for use.
 
-  ```sh
-    git clone https://github.com/komoran/PyKOMORAN
-    cp -r PyKOMORAN/python/PyKomoran [DEST_LOCATION_TO_YOUR_PROJECT]
+```bash
+  git clone https://github.com/komoran/PyKOMORAN
+  cp -r PyKOMORAN/python/PyKomoran [DEST_LOCATION_TO_YOUR_PROJECT]
+```
 
 ## Usage
 
@@ -37,18 +38,18 @@
 
 * After import dependencies, create a Komoran instance.
 
-  ```python
-    from PyKomoran import *
-    komoran = Komoran()
-  ```
+```python
+  from PyKomoran import *
+  komoran = Komoran()
+```
 
 * After then, run analyzing method.
 
-  ```python
-    komoran.get_plain_text("① 대한민국은 민주공화국이다.")
-    # # Result
-    # ①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF
-  ```
+```python
+  komoran.get_plain_text("① 대한민국은 민주공화국이다.")
+  # # Result
+  # ①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF
+```
 
 ### Usage in detail
 

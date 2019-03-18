@@ -1,3 +1,5 @@
 include LICENSE
 include README.md
 include requirements.txt
+include PyKomoran/libs/**
+include PyKomoran/models_*/**
