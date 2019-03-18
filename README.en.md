@@ -4,7 +4,7 @@
 
 ## Introduction
 
-* PyKOMORAN is Python wrapper for [KOMORAN, KOrean MORphical ANalyzer](https://github.com/shin285/KOMORAN).
+* PyKOMORAN is Python wrapper project for [KOMORAN, KOrean MORphical ANalyzer](https://github.com/shin285/KOMORAN).
 * PyKOMORAN is using [Py4J](https://github.com/bartdag/py4j) for wrapping [KOMORAN Java library](https://github.com/shin285/KOMORAN).
 * If you have any issue or question, please leave an issue on [PyKOMORAN Project](https://github.com/komoran/PyKOMORAN/issues).
 
@@ -16,6 +16,8 @@
   * Java 8+ JDK Environment
   * [Py4J](https://www.py4j.org/install.html), 0.10.8 (or higher)
     * We recommend you to use `pip`, as `pip install py4j`. It's simple and easy.
+  * Python 3
+    * We recommend you to use Python 3.6 or higher.
 
 ### How to install
 
