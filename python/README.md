@@ -13,9 +13,9 @@
 * To use PyKomoran, the following requirements must be installed
   * Java 8+ JDK Environment
   * [Py4J](https://www.py4j.org/install.html), 0.10.8 (or higher)
-    * We recommend you to use `pip`, as `pip install py4j`. It's simple and easy.
+    * We recommend you use `pip`, as `pip install py4j`. It's simple and easy.
   * Python 3
-    * We recommend you to use Python 3.6 or higher.
+    * We recommend you use Python 3.6 or higher.
 
 ### How to install
 

@@ -15,23 +15,24 @@
 * To use PyKomoran, the following requirements must be installed
   * Java 8+ JDK Environment
   * [Py4J](https://www.py4j.org/install.html), 0.10.8 (or higher)
-    * We recommend you to use `pip`, as `pip install py4j`. It's simple and easy.
+    * We recommend you use `pip`, as `pip install py4j`. It's simple and easy.
   * Python 3
-    * We recommend you to use Python 3.6 or higher.
+    * We recommend you use Python 3.6 or higher.
 
 ### How to install
 
 * You can install PyKomoran using `pip`.
 
-  ```sh
-    pip install PyKomoran
-  ```
+```sh
+  pip install PyKomoran
+```
 
 * Or, just clone this repository and copy for use.
 
-  ```sh
+```sh
     git clone https://github.com/komoran/PyKOMORAN
     cp -r PyKOMORAN/python/PyKomoran [DEST_LOCATION_TO_YOUR_PROJECT]
+```
 
 ## Usage
 
@@ -39,18 +40,18 @@
 
 * After import dependencies, create a Komoran instance.
 
-  ```python
-    from PyKomoran import *
-    komoran = Komoran()
-  ```
+```python
+  from PyKomoran import *
+  komoran = Komoran()
+```
 
 * After then, run analyzing method.
 
-  ```python
-    komoran.get_plain_text("① 대한민국은 민주공화국이다.")
-    # # Result
-    # ①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF
-  ```
+```python
+  komoran.get_plain_text("① 대한민국은 민주공화국이다.")
+  # # Result
+  # ①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF
+```
 
 ### Usage in detail
 
