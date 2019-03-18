@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+group = 'kr.co.shineware.nlp.pykomoran'
+version = '0.1.0'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'com.github.shin285:KOMORAN:3.3.4'
+    compile 'net.sf.py4j:py4j:0.10.8.1'
+
+}
