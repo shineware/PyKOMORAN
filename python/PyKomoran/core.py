@@ -45,10 +45,14 @@ class Komoran:
 
     @_validate_initialized
     def set_user_dic(self, dic_path):
+        if not os.path.exists(dic_path):
+            raise KomoranError("user.dic path does NOT exist!")
         self._komoran.setUserDic(dic_path)
 
     @_validate_initialized
     def set_fw_dic(self, dic_path):
+        if not os.path.exists(dic_path):
+            raise KomoranError("fw.dic path does NOT exist!")
         self._komoran.setFWDic(dic_path)
 
     @_validate_initialized
