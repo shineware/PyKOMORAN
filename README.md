@@ -55,7 +55,7 @@
 
 ### 자세한 사용법
 
-* 자세한 사용방법은 [KOMORAN 문서 사이트](https://docs.komoran.kr)을 확인해주시기 바랍니다.
+* 자세한 사용방법은 [KOMORAN 문서 사이트]([https://docs.komoran.kr](https://docs.komoran.kr/pykomoran/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)을 확인해주시기 바랍니다.
 
 ## 라이선스
 
@@ -65,5 +65,5 @@
 ## 기여하기
 
 * 소스 코드나 버그 리포트, 문서 내의 오타 수정 등 어떠한 기여도 환영합니다.
-* [Komoran Website](https://www.shineware.co.kr/products/komoran/#demo?utm_source=komoran-kr&utm_medium=Referral&utm_campaign=github-PyKomoran) 또는 [KOMORAN GitHub 페이지](https://github.com/komoran)를 참고해주세요!
+* [Komoran Website](https://www.shineware.co.kr/products/komoran/#demo?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) 또는 [KOMORAN GitHub 페이지](https://github.com/komoran)를 참고해주세요!
 * 또는, 필요한 기능이나 제안이 있으신가요? [기능 추가 요청](https://github.com/komoran/PyKOMORAN/issues/new?template=FEATURE_REQUEST.md)을 남겨주세요!
