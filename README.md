@@ -14,10 +14,10 @@
 
 * PyKomoran을 이용하기 위해서는 다음의 요구사항이 설치되어 있어야 합니다.
   * Java 8 이상의 JDK 환경
-  * [Py4J](https://www.py4j.org/install.html), 0.10.8 이상
-    * `pip`를 이용하여 간편하게 설치(`pip install py4j`)하는 것을 권장합니다.
   * Python 3 이상
-    * Python 3.6 이상을 사용하는 것을 권장합니다.
+    * Python 3.4 이상을 지원합니다.
+  * [Py4J](https://www.py4j.org/install.html), 0.10 이상
+    * `pip`를 이용하여 PyKomoran 설치 시 함께 설치됩니다.
 
 ### 설치방법
 
@@ -33,6 +33,8 @@
   git clone https://github.com/komoran/PyKOMORAN
   cp -r PyKOMORAN/python/PyKomoran [사용하실 PROJECT 위치]
 ```
+
+* 자세한 설치 방법은 [KOMORAN 문서 사이트](https://docs.komoran.kr/pykomoran/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)를 참고해주세요.
 
 ## 사용법
 
@@ -55,7 +57,7 @@
 
 ### 자세한 사용법
 
-* 자세한 사용방법은 [KOMORAN 문서 사이트]([https://docs.komoran.kr](https://docs.komoran.kr/pykomoran/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)을 확인해주시기 바랍니다.
+* 자세한 사용방법은 [KOMORAN 문서 사이트](https://docs.komoran.kr/pykomoran/tutorial.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)을 확인해주시기 바랍니다.
 
 ## 라이선스
 
