@@ -4,7 +4,7 @@ from PyKomoran.type import *
 
 def test_to_init_Token():
     """
-    init Token using given Dict, and validate given values with Token methods
+    Type Test: init Token using given Dict, and validate given values with Token methods
     :return:
     """
     # @formatter:off
@@ -33,7 +33,7 @@ def test_to_init_Token():
 
 def test_to_init_Token_using_Pos_name():
     """
-    init Token using given Dict with use_pos_name parameter, and validate given values with Token methods
+    Type Test: init Token using given Dict with use_pos_name parameter, and validate given values with Token methods
     :return:
     """
     # @formatter:off
@@ -62,7 +62,7 @@ def test_to_init_Token_using_Pos_name():
 
 def test_to_init_Pair():
     """
-    init Pair using given Dict, and validate given values with Pair methods
+    Type Test: init Pair using given Dict, and validate given values with Pair methods
     :return:
     """
     # @formatter:off
@@ -85,7 +85,7 @@ def test_to_init_Pair():
 
 def test_to_pos_table():
     """
-    check pos_table is initialized well
+    Type Test: check pos_table is initialized well
     :return:
     """
     global pos_table
