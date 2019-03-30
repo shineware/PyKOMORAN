@@ -4,7 +4,7 @@
 
 * PyKOMORAN is Python wrapper project for [KOMORAN, KOrean MORphical ANalyzer](https://github.com/shin285/KOMORAN).
 * PyKOMORAN is using [Py4J](https://github.com/bartdag/py4j) for wrapping [KOMORAN Java library](https://github.com/shin285/KOMORAN).
-* If you have any issue or question, please leave an issue on [PyKOMORAN Project](https://github.com/komoran/PyKOMORAN/issues).
+* If you have any issue or question, please leave an issue on [PyKOMORAN Project](https://github.com/shineware/PyKOMORAN/issues).
 
 ## Installation
 
@@ -28,7 +28,7 @@
 * Or, just clone this repository and copy for use.
 
 ```bash
-  git clone https://github.com/komoran/PyKOMORAN
+  git clone https://github.com/shineware/PyKOMORAN
   cp -r PyKOMORAN/python/PyKomoran [DEST_LOCATION_TO_YOUR_PROJECT]
 ```
 
@@ -65,4 +65,4 @@
 
 * We're always happy to receive any contributions including code, bug reports and documentation fixes.
 * Please visit our [Website](https://www.shineware.co.kr/products/komoran/#demo?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) and/or [Project Organization at GitHub](https://github.com/komoran) for more information.
-* Or, if you have any necessary features or suggestion? Please leave your idea on [Request to add new feature](https://github.com/komoran/PyKOMORAN/issues/new?template=FEATURE_REQUEST.md)
+* Or, if you have any necessary features or suggestion? Please leave your idea on [Request to add new feature](https://github.com/shineware/PyKOMORAN/issues/new?template=FEATURE_REQUEST.md)

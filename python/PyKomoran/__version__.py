@@ -13,5 +13,5 @@ __author__ = 'Junghwan Park'
 __author_email__ = 'reserve.dev@gmail.com'
 __license__ = 'Apache 2.0'
 __copyright__ = 'Copyright 2019 Junghwan Park'
-__download_url__ = 'https://github.com/komoran/PyKOMORAN/releases/download/{0}/PyKomoran-{0}.tar.gz'.format(__version__)
+__download_url__ = 'https://github.com/shineware/PyKOMORAN/releases/download/{0}/PyKomoran-{0}.tar.gz'.format(__version__)
 __keywords__ = 'KOMORAN, PyKomoran, KOrean MORphical ANalyzer, Morph Analyzer',

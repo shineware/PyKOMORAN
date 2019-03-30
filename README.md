@@ -6,7 +6,7 @@
 
 * PyKOMORAN은 Python에서 한국어 형태소 분석기인 [KOMORAN](https://github.com/shin285/KOMORAN)을 사용할 수 있도록 하는 프로젝트입니다.
 * PyKOMORAN은 [Py4J](https://github.com/bartdag/py4j)를 이용하여 [KOMORAN Java Library](https://github.com/shin285/KOMORAN)를 실행합니다.
-* 사용 중 이슈나 질문이 있다면 [PyKOMORAN 프로젝트](https://github.com/komoran/PyKOMORAN/issues)에 이슈를 남겨주세요.
+* 사용 중 이슈나 질문이 있다면 [PyKOMORAN 프로젝트](https://github.com/shineware/PyKOMORAN/issues)에 이슈를 남겨주세요.
 
 ## 설치
 
@@ -30,7 +30,7 @@
 * 또는, 소스코드를 다운로드받아 설치할 수 있습니다.
 
 ```sh
-  git clone https://github.com/komoran/PyKOMORAN
+  git clone https://github.com/shineware/PyKOMORAN
   cp -r PyKOMORAN/python/PyKomoran [사용하실 PROJECT 위치]
 ```
 
@@ -68,4 +68,4 @@
 
 * 소스 코드나 버그 리포트, 문서 내의 오타 수정 등 어떠한 기여도 환영합니다.
 * [Komoran Website](https://www.shineware.co.kr/products/komoran/#demo?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) 또는 [KOMORAN GitHub 페이지](https://github.com/komoran)를 참고해주세요!
-* 또는, 필요한 기능이나 제안이 있으신가요? [기능 추가 요청](https://github.com/komoran/PyKOMORAN/issues/new?template=FEATURE_REQUEST.md)을 남겨주세요!
+* 또는, 필요한 기능이나 제안이 있으신가요? [기능 추가 요청](https://github.com/shineware/PyKOMORAN/issues/new?template=FEATURE_REQUEST.md)을 남겨주세요!
