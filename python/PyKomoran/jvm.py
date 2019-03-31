@@ -10,7 +10,7 @@ __all__ = ['jvm_gateway', 'init_jvm', 'get_jvm']
 jvm_gateway = None
 
 
-def init_jvm(jar_path="./libs", max_heap=1024):
+def init_jvm(max_heap, jar_path="./libs"):
     base_path = os.path.dirname(os.path.realpath(__file__))
     jar_path = os.path.abspath(os.path.join(base_path, jar_path))
 

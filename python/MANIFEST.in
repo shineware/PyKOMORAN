@@ -3,3 +3,4 @@ include README.md
 include requirements.txt
 include PyKomoran/libs/**
 include PyKomoran/models_*/**
+include PyKomoran/tests/test_data/**

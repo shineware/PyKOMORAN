@@ -1,4 +1,6 @@
+import os
 import nose
+
 from PyKomoran.core import *
 from PyKomoran.type import *
 
@@ -8,7 +10,7 @@ komoran = None
 
 def test_to_init_Komoran():
     """
-    init Komoran with default model (models_full)
+    Core Test: init Komoran with default model (models_full)
     :return:
     """
     global komoran
@@ -19,19 +21,9 @@ def test_to_init_Komoran():
     assert komoran._komoran.isInitialized()
 
 
-def test_to_set_user_dic():
-    # TODO: implement test_to_set_user_dic() test code
-    pass
-
-
-def test_to_set_fw_dic():
-    # TODO: implement test_to_set_fw_dic() test code
-    pass
-
-
 def test_to_analyze_get_nouns():
     """
-    analyze test string with get_nouns() and check result is as expected
+    Core Test: analyze with get_nouns()
     :return:
     """
     global komoran
@@ -46,7 +38,7 @@ def test_to_analyze_get_nouns():
 
 def test_to_analyze_get_morphes_by_tags():
     """
-     analyze test string with get_morphes_by_tags() and check result is as expected
+     Core Test: analyze with get_morphes_by_tags()
     :return:
     """
     global komoran
@@ -61,7 +53,7 @@ def test_to_analyze_get_morphes_by_tags():
 
 def test_to_analyze_get_morphes_by_invalid_tags():
     """
-    analyze test string with get_morphes_by_tags(tag_list=['INVALID','POS']) and invalid tag_list and check result is as expected
+    Core Test: analyze with get_morphes_by_tags(tag_list=['INVALID','POS']) & invalid tag_list
     :return:
     """
     global komoran
@@ -76,7 +68,7 @@ def test_to_analyze_get_morphes_by_invalid_tags():
 
 def test_to_analyze_get_morphes_by_no_given_tags():
     """
-    analyze test string with get_morphes_by_tags(tag_list=[]) and check result is as expected
+    Core Test: analyze with get_morphes_by_tags(tag_list=[])
     :return:
     """
     global komoran
@@ -91,7 +83,7 @@ def test_to_analyze_get_morphes_by_no_given_tags():
 
 def test_to_analyze_get_plain_text():
     """
-    analyze test string with get_plain_text() and check result is as expected
+    Core Test: analyze with get_plain_text()
     :return:
     """
     global komoran
@@ -107,7 +99,7 @@ def test_to_analyze_get_plain_text():
 
 def test_to_analyze_get_token_list_with_flatten():
     """
-    analyze test string with get_token_list(flatten=False,use_pos_name=False) and check result is as expected
+    Core Test: analyze with get_token_list(flatten=False,use_pos_name=False)
     :return:
     """
     global komoran
@@ -145,7 +137,7 @@ def test_to_analyze_get_token_list_with_flatten():
 
 def test_to_analyze_get_token_list_with_flatten_and_use_pos_name():
     """
-    analyze test string with get_token_list(flatten=True,use_pos_name=True) and check result is as expected
+    Core Test: analyze with get_token_list(flatten=True,use_pos_name=True)
     :return:
     """
     global komoran
@@ -183,7 +175,7 @@ def test_to_analyze_get_token_list_with_flatten_and_use_pos_name():
 
 def test_to_analyze_get_token_list_without_flatten():
     """
-    analyze test string with get_token_list(flatten=False,use_pos_name=False) and check result is as expected
+    Core Test: analyze with get_token_list(flatten=False,use_pos_name=False)
     :return:
     """
     global komoran
@@ -222,7 +214,7 @@ def test_to_analyze_get_token_list_without_flatten():
 
 def test_to_analyze_get_token_list_without_flatten_and_use_pos_name():
     """
-    analyze test string with get_token_list(flatten=False,use_pos_name=True) and check result is as expected
+    Core Test: analyze with get_token_list(flatten=False,use_pos_name=True)
     :return:
     """
     global komoran
@@ -261,7 +253,7 @@ def test_to_analyze_get_token_list_without_flatten_and_use_pos_name():
 
 def test_to_analyze_get_list():
     """
-    analyze test string with get_list() and check result is as expected
+    Core Test: analyze with get_list()
     :return:
     """
     global komoran
@@ -288,6 +280,111 @@ def test_to_analyze_get_list():
                             'second': 'SF'
                         })
     assert str(pairs[24]) == './SF'
+    # @formatter:on
+
+
+def test_to_set_user_dic():
+    """
+    Core Test: test with set_user_dic()
+    :return:
+    """
+    global komoran
+
+    if komoran is None:
+        komoran = Komoran(model_path='./models_full')
+
+    tokens = komoran.get_token_list("테스트 단어")
+
+    # @formatter:off
+    assert isinstance(tokens, list)
+    assert len(tokens) == 2
+    assert isinstance(tokens[0], Token)
+    assert tokens[0] == Token({
+                            'morph': '테스트',
+                            'pos': 'NNP',
+                            'beginIndex': 0,
+                            'endIndex': 3
+                        })
+    assert tokens[1] == Token({
+                            'morph': '단어',
+                            'pos': 'NNG',
+                            'beginIndex': 4,
+                            'endIndex': 6
+                        })
+    # @formatter:on
+
+    base_path = os.path.dirname(os.path.realpath(__file__))
+    komoran.set_user_dic(os.path.join(base_path, "./test_data/dic.user"))
+
+    tokens = komoran.get_token_list("테스트 단어")
+
+    # @formatter:off
+    assert isinstance(tokens, list)
+    assert len(tokens) == 1
+    assert isinstance(tokens[0], Token)
+    assert tokens[0] == Token({
+                            'morph': '테스트 단어',
+                            'pos': 'NNP',
+                            'beginIndex': 0,
+                            'endIndex': 6
+                        })
+    # @formatter:on
+
+    pass
+
+
+def test_to_set_fw_dic():
+    # TODO: implement test_to_set_fw_dic() test code
+    """
+    Core Test: test with set_fw_dic()
+    :return:
+    """
+    global komoran
+
+    if komoran is None:
+        komoran = Komoran(model_path='./models_full')
+
+    tokens = komoran.get_token_list("테스트")
+
+    # @formatter:off
+    assert isinstance(tokens, list)
+    assert len(tokens) == 1
+    assert isinstance(tokens[0], Token)
+    assert tokens[0] == Token({
+                            'morph': '테스트',
+                            'pos': 'NNP',
+                            'beginIndex': 0,
+                            'endIndex': 3
+                        })
+    # @formatter:on
+
+    base_path = os.path.dirname(os.path.realpath(__file__))
+    komoran.set_fw_dic(os.path.join(base_path, "./test_data/fwd.user"))
+
+    tokens = komoran.get_token_list("테스트")
+
+    # @formatter:off
+    assert isinstance(tokens, list)
+    assert len(tokens) == 3
+    assert isinstance(tokens[0], Token)
+    assert tokens[0] == Token({
+                            'morph': '테',
+                            'pos': 'NNG',
+                            'beginIndex': 0,
+                            'endIndex': 3           # TODO: Check and fix KOMORAN
+                        })
+    assert tokens[1] == Token({
+                            'morph': '스',
+                            'pos': 'NNG',
+                            'beginIndex': 0,        # TODO: Check and fix KOMORAN
+                            'endIndex': 3           # TODO: Check and fix KOMORAN
+                        })
+    assert tokens[2] == Token({
+                            'morph': '트',
+                            'pos': 'NNG',
+                            'beginIndex': 0,        # TODO: Check and fix KOMORAN
+                            'endIndex': 3           # TODO: Check and fix KOMORAN
+                        })
     # @formatter:on
 
 

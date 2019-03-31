@@ -22,13 +22,13 @@ class Komoran:
     Komoran Wrapper class
     """
 
-    def __init__(self, model_path="./models_full"):
+    def __init__(self, model_path="./models_full", max_heap=1024):
         self._base_path = os.path.dirname(os.path.realpath(__file__))
         self._model_path = os.path.abspath(os.path.join(self._base_path, model_path))
 
         assert os.path.exists(self._model_path)
 
-        jvm.init_jvm()
+        jvm.init_jvm(max_heap)
         self._komoran = jvm.get_jvm().kr.co.shineware.nlp.pykomoran.KomoranEntryPoint()
 
         self._komoran.init(self._model_path)
