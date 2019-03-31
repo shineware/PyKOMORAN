@@ -1,6 +1,8 @@
 # PyKOMORAN
 
-[한국어](README.md) | [English](README.en.md)
+[![DOI](https://zenodo.org/badge/175813952.svg)](https://zenodo.org/badge/latestdoi/175813952)
+
+[[한국어](README.md)] | [[English](README.en.md)]
 
 ## 소개
 
@@ -58,6 +60,13 @@
 ### 자세한 사용법
 
 * 자세한 사용방법은 [KOMORAN 문서 사이트](https://docs.komoran.kr/pykomoran/tutorial.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)을 확인해주시기 바랍니다.
+
+## 인용하기
+
+* PyKOMORAN은 [Zenodo](https://zenodo.org)를 이용하여 DOI(Digital Object Identifier)를 제공하고 있습니다.
+* PyKOMORAN을 인용하실 때에는 다음의 링크를 참고해주시기 바랍니다.
+  * [DOI JSON Export](https://zenodo.org/record/2619178/export/json)
+  * [DOI BibTeX Export](https://zenodo.org/record/2619178/export/hx)
 
 ## 라이선스
 
