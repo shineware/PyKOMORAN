@@ -1,6 +1,10 @@
 # PyKOMORAN
 
-[![DOI](https://zenodo.org/badge/175813952.svg)](https://zenodo.org/badge/latestdoi/175813952)
+[![DOI](https://zenodo.org/badge/175813952.svg)](https://doi.org/10.5281/zenodo.2619177)
+![PyPI](https://img.shields.io/pypi/v/PyKomoran.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyKomoran.svg)
+![Downloads](https://img.shields.io/pypi/dm/PyKomoran.svg)
+![License](https://img.shields.io/github/license/shineware/PyKOMORAN.svg)
 
 [[한국어](README.md)] | [[English](README.en.md)]
 
@@ -16,7 +20,7 @@
 
 * To use PyKomoran, the following requirements must be installed
   * Java 8+ JDK Environment
-  * Python 3
+  * Python 3.4+
     * We recommend you use Python 3.4 or higher.
   * [Py4J](https://www.py4j.org/install.html), 0.10 (or higher)
     * This will be installed when installing PyKomoran using `pip`.
