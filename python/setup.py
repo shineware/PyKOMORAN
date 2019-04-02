@@ -53,6 +53,10 @@ setup(
                                         "Natural Language :: Korean",
                                         "Programming Language :: Java",
                                         "Programming Language :: Python :: 3 :: Only",
+                                        "Programming Language :: Python :: 3.4",
+                                        "Programming Language :: Python :: 3.5",
+                                        "Programming Language :: Python :: 3.6",
+                                        "Programming Language :: Python :: 3.7",
                                         "Topic :: Scientific/Engineering :: Information Analysis",
                                         "Topic :: Software Development :: Libraries :: Java Libraries",
                                         "Topic :: Text Processing :: Linguistic"
