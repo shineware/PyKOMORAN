@@ -1,7 +1,39 @@
-__all__ = ['Token', 'Pair', 'pos_table']
+__all__ = ['Token', 'Pair', 'Pos', 'pos_table']
 
 
 class Token:
+    """Komoran(Java)의 Token Class에 대응합니다. 형태소 분석 결과 저장을 위해 사용합니다.
+
+    Args:
+        token_in_dict (dict): Token으로 만들 Dict
+        use_pos_name (bool): Token 출력 시 품사 이름 사용 여부 (기본값: ``False``)
+                            ``True`` 인 경우 품사 기호 대신 품사 이름을 사용합니다.
+                            ``False`` 인 경우 품사 기호를 사용합니다.
+
+    Attributes:
+        morph (str): 형태소
+        pos (str): 품사
+        begin_index (int): 형태소의 시작 인덱스
+        end_index (int): 형태소의 종료 인덱스
+        use_pos_name (bool): 품사 이름 사용 여부
+
+    Examples:
+
+        >>> # komoran은 Komoran 객체입니다.
+        >>> tokens = komoran.get_token_list("① 대한민국은 민주공화국이다.")
+        >>> token = tokens[1]
+        >>> token
+        대한민국/NNP(2,6)
+        >>> token.get_morph()
+        '대한민국'
+        >>> token.get_pos()
+        'NNP'
+        >>> token.get_begin_index()
+        2
+        >>> token.get_end_index()
+        6
+
+    """
     def __init__(self, token_in_dict, use_pos_name=False):
         self.morph = token_in_dict.get('morph')
         self.pos = token_in_dict.get('pos')
@@ -10,17 +42,37 @@ class Token:
         self.use_pos_name = use_pos_name
 
     def get_morph(self):
+        """형태소를 반환합니다.
+
+        Returns:
+            str: 형태소
+        """
         return self.morph
 
     def get_pos(self):
+        """품사를 반환합니다.
+
+        Returns:
+            str: 품사 기호 (또는 이름)
+        """
         if self.use_pos_name:
             return pos_table[self.pos]
         return self.pos
 
     def get_begin_index(self):
+        """형태소의 시작 인덱스를 반환합니다.
+
+        Returns:
+            int: 시작 인덱스
+        """
         return self.begin_index
 
     def get_end_index(self):
+        """형태소의 종료 인덱스를 반환합니다.
+
+        Returns:
+            int: 종료 인덱스
+        """
         return self.end_index
 
     def __eq__(self, other):
@@ -37,14 +89,46 @@ class Token:
 
 
 class Pair:
+    """Komoran(Java)의 Pair Class에 대응합니다. 형태소 분석 결과 저장을 위해 사용합니다.
+
+    Args:
+        pair_in_dict (dict): Pair로 만들 Dict
+
+    Attributes:
+        first (str): 형태소
+        second (str): 품사
+
+    Examples:
+
+        >>> # komoran은 Komoran 객체입니다.
+        >>> pairs = komoran.get_list("① 대한민국은 민주공화국이다.")
+        >>> pair = pairs[1]
+        >>> pair
+        대한민국/NNP
+        >>> pair.get_first()
+        '대한민국'
+        >>> pair.get_second()
+        'NNP'
+
+    """
     def __init__(self, pair_in_dict):
         self.first = pair_in_dict.get('first')
         self.second = pair_in_dict.get('second')
 
     def get_first(self):
+        """형태소를 반환합니다.
+
+        Returns:
+            str: 형태소
+        """
         return self.first
 
     def get_second(self):
+        """품사를 반환합니다.
+
+        Returns:
+            str: 품사 기호
+        """
         return self.second
 
     def __eq__(self, other):
@@ -59,6 +143,22 @@ class Pair:
 
 
 class Pos:
+    """형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다.
+
+    Attributes:
+        pos_table (dict): 품사 사전
+
+    Examples:
+
+        >>> pos_table = Pos()
+        >>> pos['NNP']
+        '고유 명사'
+        >>> pos['SW']
+        '기타기호(논리수학기호,화폐기호)'
+        >>> len(pos_table)
+        45
+
+    """
     def __init__(self):
         self.pos_table = {
             # 체언

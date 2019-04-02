@@ -10,7 +10,16 @@ __all__ = ['jvm_gateway', 'init_jvm', 'get_jvm']
 jvm_gateway = None
 
 
-def init_jvm(max_heap, jar_path="./libs"):
+def init_jvm(max_heap=1024, jar_path="./libs"):
+    """KOMORAN Jar를 포함한 JVM을 초기화한 후, 반환합니다.
+
+    Args:
+        max_heap (int): JVM 실행 시 Max Heap Size (기본값: ``1024``, 단위: ``MB``)
+        jar_path (str): JVM 실행 시 포함할 Jar Path 지정 (기본값: ``"./libs"``)
+
+    Returns:
+        py4j.java_gateway.JavaGateway: 초기화된 JVM 객체
+    """
     base_path = os.path.dirname(os.path.realpath(__file__))
     jar_path = os.path.abspath(os.path.join(base_path, jar_path))
 
@@ -49,6 +58,11 @@ def init_jvm(max_heap, jar_path="./libs"):
 
 
 def get_jvm():
+    """현재 생성된 JVM 객체를 반환합니다.
+
+    Returns:
+        py4j.java_gateway.JavaGateway: 초기화된 JVM 객체
+    """
     global jvm_gateway
 
     if jvm_gateway is None:
