@@ -144,6 +144,7 @@ class Pair:
 
 class Pos:
     """형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다.
+    전체 품사표는 :doc:`/firststep/postypes` 를 참고해주세요.
 
     Attributes:
         pos_table (dict): 품사 사전
