@@ -1,0 +1,535 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PyKomoran.type module &mdash; PyKOMORAN  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="../../genindex.html" />
+    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="next" title="Java API" href="../java/packages.html" />
+    <link rel="prev" title="PyKomoran.jvm module" href="PyKomoran.jvm.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PyKOMORAN
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PyKOMORAN 첫걸음</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../firststep/installation.html">설치하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firststep/tutorial.html">3줄의 코드로 형태소 분석 시작하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../firststep/postypes.html">품사표 (PoS Table)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API 소개</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="PyKomoran.html">PyKomoran package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="PyKomoran.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="PyKomoran.core.html">PyKomoran.core module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="PyKomoran.jvm.html">PyKomoran.jvm module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">PyKomoran.type module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="PyKomoran.html#module-PyKomoran">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../java/packages.html">Java API</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PyKOMORAN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">Python API</a> &raquo;</li>
+        
+          <li><a href="PyKomoran.html">PyKomoran package</a> &raquo;</li>
+        
+      <li>PyKomoran.type module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/python/PyKomoran.type.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-PyKomoran.type">
+<span id="pykomoran-type-module"></span><h1>PyKomoran.type module<a class="headerlink" href="#module-PyKomoran.type" title="제목 주소">¶</a></h1>
+<dl class="class">
+<dt id="PyKomoran.type.Token">
+<em class="property">class </em><code class="descclassname">PyKomoran.type.</code><code class="descname">Token</code><span class="sig-paren">(</span><em>token_in_dict</em>, <em>use_pos_name=False</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Token" title="정의 주소">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Komoran(Java)의 Token Class에 대응합니다. 형태소 분석 결과 저장을 위해 사용합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>token_in_dict</strong> (<em>dict</em>) -- Token으로 만들 Dict</li>
+<li><strong>use_pos_name</strong> (<em>bool</em>) -- Token 출력 시 품사 이름 사용 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
+<code class="docutils literal notranslate"><span class="pre">True</span></code> 인 경우 품사 기호 대신 품사 이름을 사용합니다.
+<code class="docutils literal notranslate"><span class="pre">False</span></code> 인 경우 품사 기호를 사용합니다.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="PyKomoran.type.Token.morph">
+<code class="descname">morph</code><a class="headerlink" href="#PyKomoran.type.Token.morph" title="정의 주소">¶</a></dt>
+<dd><p>형태소</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PyKomoran.type.Token.pos">
+<code class="descname">pos</code><a class="headerlink" href="#PyKomoran.type.Token.pos" title="정의 주소">¶</a></dt>
+<dd><p>품사</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PyKomoran.type.Token.begin_index">
+<code class="descname">begin_index</code><a class="headerlink" href="#PyKomoran.type.Token.begin_index" title="정의 주소">¶</a></dt>
+<dd><p>형태소의 시작 인덱스</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PyKomoran.type.Token.end_index">
+<code class="descname">end_index</code><a class="headerlink" href="#PyKomoran.type.Token.end_index" title="정의 주소">¶</a></dt>
+<dd><p>형태소의 종료 인덱스</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PyKomoran.type.Token.use_pos_name">
+<code class="descname">use_pos_name</code><a class="headerlink" href="#PyKomoran.type.Token.use_pos_name" title="정의 주소">¶</a></dt>
+<dd><p>품사 이름 사용 여부</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># komoran은 Komoran 객체입니다.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">komoran</span><span class="o">.</span><span class="n">get_token_list</span><span class="p">(</span><span class="s2">&quot;① 대한민국은 민주공화국이다.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span>
+<span class="go">대한민국/NNP(2,6)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span><span class="o">.</span><span class="n">get_morph</span><span class="p">()</span>
+<span class="go">&#39;대한민국&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span><span class="o">.</span><span class="n">get_pos</span><span class="p">()</span>
+<span class="go">&#39;NNP&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span><span class="o">.</span><span class="n">get_begin_index</span><span class="p">()</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">token</span><span class="o">.</span><span class="n">get_end_index</span><span class="p">()</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="PyKomoran.type.Token.get_begin_index">
+<code class="descname">get_begin_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Token.get_begin_index" title="정의 주소">¶</a></dt>
+<dd><p>형태소의 시작 인덱스를 반환합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">시작 인덱스</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Token.get_end_index">
+<code class="descname">get_end_index</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Token.get_end_index" title="정의 주소">¶</a></dt>
+<dd><p>형태소의 종료 인덱스를 반환합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">종료 인덱스</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Token.get_morph">
+<code class="descname">get_morph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Token.get_morph" title="정의 주소">¶</a></dt>
+<dd><p>형태소를 반환합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">형태소</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Token.get_pos">
+<code class="descname">get_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Token.get_pos" title="정의 주소">¶</a></dt>
+<dd><p>품사를 반환합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">품사 기호 (또는 이름)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PyKomoran.type.Pair">
+<em class="property">class </em><code class="descclassname">PyKomoran.type.</code><code class="descname">Pair</code><span class="sig-paren">(</span><em>pair_in_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pair" title="정의 주소">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Komoran(Java)의 Pair Class에 대응합니다. 형태소 분석 결과 저장을 위해 사용합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>pair_in_dict</strong> (<em>dict</em>) -- Pair로 만들 Dict</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="PyKomoran.type.Pair.first">
+<code class="descname">first</code><a class="headerlink" href="#PyKomoran.type.Pair.first" title="정의 주소">¶</a></dt>
+<dd><p>형태소</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="PyKomoran.type.Pair.second">
+<code class="descname">second</code><a class="headerlink" href="#PyKomoran.type.Pair.second" title="정의 주소">¶</a></dt>
+<dd><p>품사</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># komoran은 Komoran 객체입니다.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="n">komoran</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="s2">&quot;① 대한민국은 민주공화국이다.&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pair</span> <span class="o">=</span> <span class="n">pairs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pair</span>
+<span class="go">대한민국/NNP</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pair</span><span class="o">.</span><span class="n">get_first</span><span class="p">()</span>
+<span class="go">&#39;대한민국&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pair</span><span class="o">.</span><span class="n">get_second</span><span class="p">()</span>
+<span class="go">&#39;NNP&#39;</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="PyKomoran.type.Pair.get_first">
+<code class="descname">get_first</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pair.get_first" title="정의 주소">¶</a></dt>
+<dd><p>형태소를 반환합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">형태소</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Pair.get_second">
+<code class="descname">get_second</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pair.get_second" title="정의 주소">¶</a></dt>
+<dd><p>품사를 반환합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">품사 기호</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="PyKomoran.type.Pos">
+<em class="property">class </em><code class="descclassname">PyKomoran.type.</code><code class="descname">Pos</code><a class="headerlink" href="#PyKomoran.type.Pos" title="정의 주소">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다.
+전체 품사표는 <a class="reference internal" href="../../firststep/postypes.html"><span class="doc">품사표 (PoS Table)</span></a> 를 참고해주세요.</p>
+<dl class="attribute">
+<dt id="PyKomoran.type.Pos.pos_table">
+<code class="descname">pos_table</code><a class="headerlink" href="#PyKomoran.type.Pos.pos_table" title="정의 주소">¶</a></dt>
+<dd><p>품사 사전</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pos_table</span> <span class="o">=</span> <span class="n">Pos</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pos</span><span class="p">[</span><span class="s1">&#39;NNP&#39;</span><span class="p">]</span>
+<span class="go">&#39;고유 명사&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pos</span><span class="p">[</span><span class="s1">&#39;SW&#39;</span><span class="p">]</span>
+<span class="go">&#39;기타기호(논리수학기호,화폐기호)&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">pos_table</span><span class="p">)</span>
+<span class="go">45</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../java/packages.html" class="btn btn-neutral float-right" title="Java API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="PyKomoran.jvm.html" class="btn btn-neutral" title="PyKomoran.jvm module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, SHINEWARE TEAM
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-99586710-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>KomoranEntryPoint &mdash; PyKOMORAN  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="../../../../../../../genindex.html" />
+    <link rel="search" title="검색" href="../../../../../../../search.html" />
+    <link rel="prev" title="kr.co.shineware.nlp.pykomoran" href="package-index.html" /> 
+
+  
+  <script src="../../../../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../../../../index.html" class="icon icon-home"> PyKOMORAN
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">PyKOMORAN 첫걸음</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../firststep/installation.html">설치하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../firststep/tutorial.html">3줄의 코드로 형태소 분석 시작하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../firststep/postypes.html">품사표 (PoS Table)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API 소개</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../python/modules.html">Python API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../packages.html">Java API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="package-index.html">kr.co.shineware.nlp.pykomoran</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">KomoranEntryPoint</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">PyKOMORAN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../../packages.html">Java API</a> &raquo;</li>
+        
+          <li><a href="package-index.html">kr.co.shineware.nlp.pykomoran</a> &raquo;</li>
+        
+      <li>KomoranEntryPoint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../../../../../_sources/api/java/kr/co/shineware/nlp/pykomoran/KomoranEntryPoint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="komoranentrypoint">
+<h1>KomoranEntryPoint<a class="headerlink" href="#komoranentrypoint" title="제목 주소">¶</a></h1>
+<dl class="type">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint">
+public class <code class="descname">KomoranEntryPoint</code><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint" title="정의 주소">¶</a></dt>
+<dd><p>KOMORAN을 Wrapping하는 Class로, Py4J에 의해 불리는 Java-side의 EntryPoint입니다. 직접 실행 시 main 메소드에서 Py4J의 GatewayServer를 띄웁니다. 사용법:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KomoranEntryPoint</span> <span class="n">kep</span> <span class="o">=</span> <span class="n">new</span> <span class="n">KomoranEntryPoint</span><span class="p">();</span>
+<span class="n">kep</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">MODEL_PATH</span><span class="p">);</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body"><a class="reference external" href="https://github.com/9bow">9bow</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>See also:</strong> <a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/core/Komoran.html" title="kr.co.shineware.nlp.komoran.core.Komoran"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.core.Komoran</span></code></a>, <a class="reference external" href="https://www.py4j.org/_static/javadoc/py4j/GatewayServer.html" title="py4j.GatewayServer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">py4j.GatewayServer</span></code></a></p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="제목 주소">¶</a></h2>
+<div class="section" id="id1">
+<h3>KomoranEntryPoint<a class="headerlink" href="#id1" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.KomoranEntryPoint()">
+public void <code class="descname">KomoranEntryPoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.KomoranEntryPoint()" title="정의 주소">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="analyze">
+<h3>analyze<a class="headerlink" href="#analyze" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.analyze(String)">
+public void <code class="descname">analyze</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.analyze(String)" title="정의 주소">¶</a></dt>
+<dd><p>내부 Komoran 객체에 주어진 sentence를 분석하여 내부 KomoranResult 객체에 저장합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>sentence</strong> -- 분석할 문장</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="getlist">
+<h3>getList<a class="headerlink" href="#getlist" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getList()">
+public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt;&gt; <code class="descname">getList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getList()" title="정의 주소">¶</a></dt>
+<dd><p>내부 KomoranResult 객체로부터 분석 결과를 Pair 형태로 반환받습니다. Python에서 이용할 수 있도록 Token 객체는 Map 객체로 변환하여 제공합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">형태소 분석 결과의 Map(Pair) List</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See also:</strong> <code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.util.common.model.Pair</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="getmorphesbytags">
+<h3>getMorphesByTags<a class="headerlink" href="#getmorphesbytags" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getMorphesByTags(List)">
+public List&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt; <code class="descname">getMorphesByTags</code><span class="sig-paren">(</span>List&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt;<em> targetPosCollection</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getMorphesByTags(List)" title="정의 주소">¶</a></dt>
+<dd><p>내부 KomoranResult 객체로부터 주어진 품사의 형태소들만 반환받습니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first simple">
+<li><strong>targetPosCollection</strong> -- 품사 List</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body"><p class="first last">주어진 형태소들에 해당하는 형태소 List</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="getnouns">
+<h3>getNouns<a class="headerlink" href="#getnouns" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getNouns()">
+public List&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt; <code class="descname">getNouns</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getNouns()" title="정의 주소">¶</a></dt>
+<dd><p>내부 KomoranResult 객체로부터 명사류의 형태소만 반환받습니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">분석 결과 중, 명사류의 형태소 List</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="getplaintext">
+<h3>getPlainText<a class="headerlink" href="#getplaintext" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getPlainText()">
+public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getPlainText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getPlainText()" title="정의 주소">¶</a></dt>
+<dd><p>내부 KomoranResult 객체로부터 PlainText 형태의 분석 결과를 반환받습니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">전체 형태소 분석 결과의 PlainText</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="gettokenlist">
+<h3>getTokenList<a class="headerlink" href="#gettokenlist" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getTokenList()">
+public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="java.lang.Object">Object</a>&gt;&gt; <code class="descname">getTokenList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getTokenList()" title="정의 주소">¶</a></dt>
+<dd><p>내부 KomoranResult 객체로부터 분석 결과를 Token 형태로 반환받습니다. Python에서 이용할 수 있도록 Token 객체는 Map 객체로 변환하여 제공합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">형태소 분석 결과의 Map(Token) List</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See also:</strong> <a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/model/Token.html" title="kr.co.shineware.nlp.komoran.model.Token"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.Token</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="init">
+<h3>init<a class="headerlink" href="#init" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.init(String)">
+public void <code class="descname">init</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> modelPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.init(String)" title="정의 주소">¶</a></dt>
+<dd><p>내부 Komoran 객체를 modelPath로 초기화합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first simple">
+<li><strong>modelPath</strong> -- 모델이 위치한 절대 경로</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">예외:</th><td class="field-body"><ul class="first last simple">
+<li><strong>FileNotFoundException</strong> -- modelPath에 모델이 존재하지 않을 시 Exception 발생</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See also:</strong> <a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/model/Token.html" title="kr.co.shineware.nlp.komoran.model.Token"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.Token</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="initbymodel">
+<h3>initByModel<a class="headerlink" href="#initbymodel" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.initByModel(DEFAULT_MODEL)">
+public void <code class="descname">initByModel</code><span class="sig-paren">(</span><a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/constant/DEFAULT_MODEL.html" title="kr.co.shineware.nlp.komoran.constant.DEFAULT_MODEL">DEFAULT_MODEL</a><em> modelType</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.initByModel(DEFAULT_MODEL)" title="정의 주소">¶</a></dt>
+<dd><p>내부 Komoran 객체를 기본 modelType으로 초기화합니다. modelType은 KOMORAN의 DEFAULT_MODEL 타입입니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>modelType</strong> -- DEFAULT_MODEL 종류</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="isinitialized">
+<h3>isInitialized<a class="headerlink" href="#isinitialized" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.isInitialized()">
+public boolean <code class="descname">isInitialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.isInitialized()" title="정의 주소">¶</a></dt>
+<dd><p>내부 Komoran 객체가 초기화되었는지 확인합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">초기화 여부 (boolean)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="main">
+<h3>main<a class="headerlink" href="#main" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.main(String[])">
+public static void <code class="descname">main</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>[]<em> args</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.main(String[])" title="정의 주소">¶</a></dt>
+<dd><p>직접 실행 시 Py4J의 GatewayServer를 실행합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>args</strong> -- </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>See also:</strong> <a class="reference external" href="https://www.py4j.org/_static/javadoc/py4j/GatewayServer.html" title="py4j.GatewayServer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">py4j.GatewayServer</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="setfwdic">
+<h3>setFWDic<a class="headerlink" href="#setfwdic" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setFWDic(String)">
+public void <code class="descname">setFWDic</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> fwDicPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setFWDic(String)" title="정의 주소">¶</a></dt>
+<dd><p>내부 Komoran 객체에 기분석 사전을 적용합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fwDicPath</strong> -- 기분석 사전이 위치한 절대 경로</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="setuserdic">
+<h3>setUserDic<a class="headerlink" href="#setuserdic" title="제목 주소">¶</a></h3>
+<dl class="method">
+<dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setUserDic(String)">
+public void <code class="descname">setUserDic</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> userDicPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setUserDic(String)" title="정의 주소">¶</a></dt>
+<dd><p>내부 Komoran 객체에 사용자 사전을 적용합니다.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
+<li><strong>userDicPath</strong> -- 사용자 사전이 위치한 절대 경로</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="package-index.html" class="btn btn-neutral" title="kr.co.shineware.nlp.pykomoran" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, SHINEWARE TEAM
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../../../" src="../../../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../../../../../_static/translations.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../../../../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-99586710-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</body>
+</html>
