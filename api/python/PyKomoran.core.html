@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -26,8 +26,8 @@
 
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="색인" href="../../genindex.html" />
-    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="PyKomoran.jvm module" href="PyKomoran.jvm.html" />
     <link rel="prev" title="PyKomoran package" href="PyKomoran.html" /> 
 
@@ -169,19 +169,19 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-PyKomoran.core">
-<span id="pykomoran-core-module"></span><h1>PyKomoran.core module<a class="headerlink" href="#module-PyKomoran.core" title="제목 주소">¶</a></h1>
+<span id="pykomoran-core-module"></span><h1>PyKomoran.core module<a class="headerlink" href="#module-PyKomoran.core" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="PyKomoran.core.Komoran">
-<em class="property">class </em><code class="descclassname">PyKomoran.core.</code><code class="descname">Komoran</code><span class="sig-paren">(</span><em>model_path='./models_full'</em>, <em>max_heap=1024</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran" title="정의 주소">¶</a></dt>
+<em class="property">class </em><code class="descclassname">PyKomoran.core.</code><code class="descname">Komoran</code><span class="sig-paren">(</span><em>model_path='./models_full'</em>, <em>max_heap=1024</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Komoran(Java)의 Python Wrapper Class입니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first last simple">
-<li><strong>model_path</strong> (<em>str</em>) -- Komoran 객체 초기화를 위한 model path (절대 경로)</li>
-<li><strong>max_heap</strong> (<em>int</em>) -- JVM의 Max Heap Size (기본값: <code class="docutils literal notranslate"><span class="pre">1024</span></code>, 단위: <code class="docutils literal notranslate"><span class="pre">MB</span></code>)</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>model_path</strong> (<em>str</em>) – Komoran 객체 초기화를 위한 model path (절대 경로)</li>
+<li><strong>max_heap</strong> (<em>int</em>) – JVM의 Max Heap Size (기본값: <code class="docutils literal notranslate"><span class="pre">1024</span></code>, 단위: <code class="docutils literal notranslate"><span class="pre">MB</span></code>)</li>
 </ul>
 </td>
 </tr>
@@ -199,17 +199,17 @@
 </div>
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.get_list">
-<code class="descname">get_list</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_list" title="정의 주소">¶</a></dt>
+<code class="descname">get_list</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>입력 문장의 형태소 분석 결과를 Pair(<a class="reference internal" href="PyKomoran.type.html#PyKomoran.type.Pair" title="PyKomoran.type.Pair"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyKomoran.type.Pair()</span></code></a>) 목록으로 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>sentence</strong> (<em>str</em>) -- 분석할 문장</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sentence</strong> (<em>str</em>) – 분석할 문장</td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body">형태소 Pair(<a class="reference internal" href="PyKomoran.type.html#PyKomoran.type.Pair" title="PyKomoran.type.Pair"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyKomoran.type.Pair()</span></code></a>)의 List</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">형태소 Pair(<a class="reference internal" href="PyKomoran.type.html#PyKomoran.type.Pair" title="PyKomoran.type.Pair"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyKomoran.type.Pair()</span></code></a>)의 List</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">반환 형식:</th><td class="field-body">list</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
 </tr>
 </tbody>
 </table>
@@ -223,22 +223,22 @@
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.get_morphes_by_tags">
-<code class="descname">get_morphes_by_tags</code><span class="sig-paren">(</span><em>sentence</em>, <em>tag_list=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_morphes_by_tags" title="정의 주소">¶</a></dt>
+<code class="descname">get_morphes_by_tags</code><span class="sig-paren">(</span><em>sentence</em>, <em>tag_list=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_morphes_by_tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>입력 문장의 형태소 분석 결과 중, 주어진 품사들만 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first simple">
-<li><strong>sentence</strong> (<em>str</em>) -- 분석할 문장</li>
-<li><strong>tag_list</strong> (<em>list</em>) -- 반환받을 품사 목록 (기본값: <code class="docutils literal notranslate"><span class="pre">[]</span></code> )</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sentence</strong> (<em>str</em>) – 분석할 문장</li>
+<li><strong>tag_list</strong> (<em>list</em>) – 반환받을 품사 목록 (기본값: <code class="docutils literal notranslate"><span class="pre">[]</span></code> )</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body"><p class="first">입력 문장의 주어진 품사들에 해당하는 형태소(str) List</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">입력 문장의 주어진 품사들에 해당하는 형태소(str) List</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">반환 형식:</th><td class="field-body"><p class="first last">list</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
 </td>
 </tr>
 </tbody>
@@ -256,17 +256,17 @@
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.get_nouns">
-<code class="descname">get_nouns</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_nouns" title="정의 주소">¶</a></dt>
+<code class="descname">get_nouns</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_nouns" title="Permalink to this definition">¶</a></dt>
 <dd><p>입력 문장의 형태소 분석 결과 중, 명사류만 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>sentence</strong> (<em>str</em>) -- 분석할 문장</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sentence</strong> (<em>str</em>) – 분석할 문장</td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body">입력 문장의 명사류에 해당하는 형태소(str) List</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">입력 문장의 명사류에 해당하는 형태소(str) List</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">반환 형식:</th><td class="field-body">list</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
 </tr>
 </tbody>
 </table>
@@ -280,17 +280,17 @@
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.get_plain_text">
-<code class="descname">get_plain_text</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_plain_text" title="정의 주소">¶</a></dt>
+<code class="descname">get_plain_text</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_plain_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>입력 문장의 형태소 분석 결과를 품사 태깅된 형태로 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>sentence</strong> (<em>str</em>) -- 분석할 문장</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sentence</strong> (<em>str</em>) – 분석할 문장</td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body">입력 문장에 형태소 별로 품사 태깅된 형태</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">입력 문장에 형태소 별로 품사 태깅된 형태</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">반환 형식:</th><td class="field-body">str</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
 </tr>
 </tbody>
 </table>
@@ -304,27 +304,27 @@
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.get_token_list">
-<code class="descname">get_token_list</code><span class="sig-paren">(</span><em>sentence</em>, <em>flatten=True</em>, <em>use_pos_name=False</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_token_list" title="정의 주소">¶</a></dt>
+<code class="descname">get_token_list</code><span class="sig-paren">(</span><em>sentence</em>, <em>flatten=True</em>, <em>use_pos_name=False</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_token_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>입력 문장의 형태소 분석 결과를 Token(<a class="reference internal" href="PyKomoran.type.html#PyKomoran.type.Token" title="PyKomoran.type.Token"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyKomoran.type.Token()</span></code></a>) 목록으로 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first simple">
-<li><strong>sentence</strong> (<em>str</em>) -- 분석할 문장</li>
-<li><strong>flatten</strong> (<em>bool</em>) -- 어절 무시 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">True</span></code>)
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sentence</strong> (<em>str</em>) – 분석할 문장</li>
+<li><strong>flatten</strong> (<em>bool</em>) – 어절 무시 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">True</span></code>)
 | <code class="docutils literal notranslate"><span class="pre">True</span></code> 인 경우 어절을 무시하고 하나의 List로 반환합니다.
 | <code class="docutils literal notranslate"><span class="pre">False</span></code> 인 경우 어절별로 List를 만들어 List of List로 반환합니다.</li>
-<li><strong>use_pos_name</strong> (<em>bool</em>) -- 품사 이름 사용 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
+<li><strong>use_pos_name</strong> (<em>bool</em>) – 품사 이름 사용 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
 | <code class="docutils literal notranslate"><span class="pre">True</span></code> 인 경우 품사 기호 대신 품사 이름을 사용합니다.
 | <code class="docutils literal notranslate"><span class="pre">False</span></code> 인 경우 품사 기호를 사용합니다.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body"><p class="first">형태소 Token(<a class="reference internal" href="PyKomoran.type.html#PyKomoran.type.Token" title="PyKomoran.type.Token"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyKomoran.type.Token()</span></code></a>)의 List</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">형태소 Token(<a class="reference internal" href="PyKomoran.type.html#PyKomoran.type.Token" title="PyKomoran.type.Token"><code class="xref py py-meth docutils literal notranslate"><span class="pre">PyKomoran.type.Token()</span></code></a>)의 List</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">반환 형식:</th><td class="field-body"><p class="first last">list</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
 </td>
 </tr>
 </tbody>
@@ -343,13 +343,13 @@
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.set_fw_dic">
-<code class="descname">set_fw_dic</code><span class="sig-paren">(</span><em>dic_path</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.set_fw_dic" title="정의 주소">¶</a></dt>
+<code class="descname">set_fw_dic</code><span class="sig-paren">(</span><em>dic_path</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.set_fw_dic" title="Permalink to this definition">¶</a></dt>
 <dd><p>기분석 사전을 적용합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>dic_path</strong> (<em>str</em>) -- 기분석 사전이 존재하는 경로 (절대 경로)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dic_path</strong> (<em>str</em>) – 기분석 사전이 존재하는 경로 (절대 경로)</td>
 </tr>
 </tbody>
 </table>
@@ -357,13 +357,13 @@
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.set_user_dic">
-<code class="descname">set_user_dic</code><span class="sig-paren">(</span><em>dic_path</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.set_user_dic" title="정의 주소">¶</a></dt>
+<code class="descname">set_user_dic</code><span class="sig-paren">(</span><em>dic_path</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.set_user_dic" title="Permalink to this definition">¶</a></dt>
 <dd><p>사용자 사전을 적용합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><strong>dic_path</strong> (<em>str</em>) -- 사용자 사전이 존재하는 경로 (절대 경로)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dic_path</strong> (<em>str</em>) – 사용자 사전이 존재하는 경로 (절대 경로)</td>
 </tr>
 </tbody>
 </table>
@@ -419,7 +419,6 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
     
 
   

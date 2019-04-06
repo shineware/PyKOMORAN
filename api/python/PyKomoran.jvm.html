@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -26,8 +26,8 @@
 
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="index" title="색인" href="../../genindex.html" />
-    <link rel="search" title="검색" href="../../search.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="PyKomoran.type module" href="PyKomoran.type.html" />
     <link rel="prev" title="PyKomoran.core module" href="PyKomoran.core.html" /> 
 
@@ -169,25 +169,25 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-PyKomoran.jvm">
-<span id="pykomoran-jvm-module"></span><h1>PyKomoran.jvm module<a class="headerlink" href="#module-PyKomoran.jvm" title="제목 주소">¶</a></h1>
+<span id="pykomoran-jvm-module"></span><h1>PyKomoran.jvm module<a class="headerlink" href="#module-PyKomoran.jvm" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="PyKomoran.jvm.init_jvm">
-<code class="descclassname">PyKomoran.jvm.</code><code class="descname">init_jvm</code><span class="sig-paren">(</span><em>max_heap=1024</em>, <em>jar_path='./libs'</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.jvm.init_jvm" title="정의 주소">¶</a></dt>
+<code class="descclassname">PyKomoran.jvm.</code><code class="descname">init_jvm</code><span class="sig-paren">(</span><em>max_heap=1024</em>, <em>jar_path='./libs'</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.jvm.init_jvm" title="Permalink to this definition">¶</a></dt>
 <dd><p>KOMORAN Jar를 포함한 JVM을 초기화한 후, 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">매개 변수:</th><td class="field-body"><ul class="first simple">
-<li><strong>max_heap</strong> (<em>int</em>) -- JVM 실행 시 Max Heap Size (기본값: <code class="docutils literal notranslate"><span class="pre">1024</span></code>, 단위: <code class="docutils literal notranslate"><span class="pre">MB</span></code>)</li>
-<li><strong>jar_path</strong> (<em>str</em>) -- JVM 실행 시 포함할 Jar Path 지정 (기본값: <code class="docutils literal notranslate"><span class="pre">&quot;./libs&quot;</span></code>)</li>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>max_heap</strong> (<em>int</em>) – JVM 실행 시 Max Heap Size (기본값: <code class="docutils literal notranslate"><span class="pre">1024</span></code>, 단위: <code class="docutils literal notranslate"><span class="pre">MB</span></code>)</li>
+<li><strong>jar_path</strong> (<em>str</em>) – JVM 실행 시 포함할 Jar Path 지정 (기본값: <code class="docutils literal notranslate"><span class="pre">&quot;./libs&quot;</span></code>)</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환:</th><td class="field-body"><p class="first">초기화된 JVM 객체</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">초기화된 JVM 객체</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">반환 형식:</th><td class="field-body"><p class="first last">py4j.java_gateway.JavaGateway</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">py4j.java_gateway.JavaGateway</p>
 </td>
 </tr>
 </tbody>
@@ -196,15 +196,15 @@
 
 <dl class="function">
 <dt id="PyKomoran.jvm.get_jvm">
-<code class="descclassname">PyKomoran.jvm.</code><code class="descname">get_jvm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.jvm.get_jvm" title="정의 주소">¶</a></dt>
+<code class="descclassname">PyKomoran.jvm.</code><code class="descname">get_jvm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.jvm.get_jvm" title="Permalink to this definition">¶</a></dt>
 <dd><p>현재 생성된 JVM 객체를 반환합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">반환:</th><td class="field-body">초기화된 JVM 객체</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">초기화된 JVM 객체</td>
 </tr>
-<tr class="field-even field"><th class="field-name">반환 형식:</th><td class="field-body">py4j.java_gateway.JavaGateway</td>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">py4j.java_gateway.JavaGateway</td>
 </tr>
 </tbody>
 </table>
@@ -258,7 +258,6 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
     
 
   

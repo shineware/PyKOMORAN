@@ -1,8 +1,8 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -26,8 +26,8 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="index" title="색인" href="../genindex.html" />
-    <link rel="search" title="검색" href="../search.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3줄의 코드로 형태소 분석 시작하기" href="tutorial.html" />
     <link rel="prev" title="PyKOMORAN 문서" href="../index.html" /> 
 
@@ -164,23 +164,23 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>설치하기<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<h1>설치하기<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>이 문서에서는 Python에서 KOMORAN을 사용하기 위해 PyKOMORAN을 설치하는 방법을 살펴보도록 하겠습니다.</p>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="first admonition-title">Note</p>
 <p class="last">PyKOMORAN은 KOMORAN을 Python에서 사용할 수 있도록 하는 프로젝트입니다.
 이는 KOMORAN을 Python으로 재작성한 것이 아니라, Python에서 Java용 KOMORAN을 실행하는 것을 뜻합니다.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="first admonition-title">Note</p>
 <p class="last">문서의 내용 중 지원되지 않거나 잘못된 내용을 발견하실 경우,
 <a class="reference external" href="https://github.com/shineware/PyKOMORAN/issues">PyKOMORAN 프로젝트에 이슈</a> 를 남겨주세요.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="id2">
-<h2>환경 준비<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<h2>환경 준비<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="java">
-<h3>Java<a class="headerlink" href="#java" title="제목 주소">¶</a></h3>
+<h3>Java<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h3>
 <p>KOMORAN을 실행하기 위한 Java 환경이 준비되어야 합니다.
 Java 8 이상의 버전을 사용하셔야 하며, 사용하고 계신 Java 버전은 다음과 같이 확인하실 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">version</span>
@@ -192,18 +192,18 @@ Java 8 이상의 버전을 사용하셔야 하며, 사용하고 계신 Java 버�
 <li><a class="reference external" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle Java 설치하기</a></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="first admonition-title">Note</p>
 <p class="last">Java 환경의 설치가 익숙하지 않으시다면, <a class="reference external" href="https://www.google.com/search?q=jdk+설치">검색엔진에서 설치 방법을 검색</a>
 해보시는 것을 권장합니다.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="first admonition-title">Note</p>
 <p class="last">OpenJDK에서의 동작 중 별다른 문제점은 아직 알려지지 않았습니다.
 OpenJDK 사용 중 이슈가 발생한다면 <a class="reference external" href="https://github.com/shineware/PyKOMORAN/issues">알려주시기를</a> 부탁드립니다.</p>
 </div>
 </div>
 <div class="section" id="python-3">
-<h3>Python 3<a class="headerlink" href="#python-3" title="제목 주소">¶</a></h3>
+<h3>Python 3<a class="headerlink" href="#python-3" title="Permalink to this headline">¶</a></h3>
 <p>PyKOMORAN은 Python 3.4 이상을 지원합니다. 사용하고 계신 Python 버전은 다음과 같이 확인하실 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
 <span class="c1"># 또는, python3 버전을 확인해보실 수 있습니다.</span>
@@ -212,18 +212,18 @@ OpenJDK 사용 중 이슈가 발생한다면 <a class="reference external" href=
 </div>
 <p>또는, <a class="reference external" href="https://www.python.org/downloads/">Python 홈페이지</a> 에서 최신 버전의 Python을 설치하실 수 있습니다.</p>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="first admonition-title">Note</p>
 <p class="last">Python 2.7은 2019년 12월 31일을 마지막으로 지원이 종료될 예정으로,
 PyKOMORAN은 Python 2.7을 지원하지 않도록 개발되었습니다.</p>
 </div>
 </div>
 <div class="section" id="py4j">
-<h3>Py4J<a class="headerlink" href="#py4j" title="제목 주소">¶</a></h3>
+<h3>Py4J<a class="headerlink" href="#py4j" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://www.py4j.org/">Py4J</a> 는 Java 버전의 KOMORAN을 Python에서 실행할 수 있도록 도와주는 Library입니다.
 아래 <a class="reference internal" href="#pip">pip 패키지 관리도구</a> 를 이용하여 PyKomoran을 설치하는 경우 <strong>자동으로 함께 설치</strong> 됩니다.</p>
 </div>
 <div class="section" id="pip">
-<h3>pip 패키지 관리도구<a class="headerlink" href="#pip" title="제목 주소">¶</a></h3>
+<h3>pip 패키지 관리도구<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
 <p>PyKOMORAN은 PyPI(Python Package Index)를 통해 설치하시는 것이 가장 편하고 쉽습니다.
 이를 위해 Python 3.4 이상을 지원하는 pip가 설치되어있는지 다음과 같이 확인하실 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
@@ -235,14 +235,14 @@ PyKOMORAN은 Python 2.7을 지원하지 않도록 개발되었습니다.</p>
 </div>
 </div>
 <div class="section" id="id6">
-<h2>설치하기<a class="headerlink" href="#id6" title="제목 주소">¶</a></h2>
+<h2>설치하기<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="#pip">pip 패키지 관리도구</a> 를 이용하는 경우 다음의 명령어를 실행하여 설치하실 수 있습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">PyKomoran</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id7">
-<h2>소스코드 다운로드<a class="headerlink" href="#id7" title="제목 주소">¶</a></h2>
+<h2>소스코드 다운로드<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
 <p>PyKOMORAN를 분석하시거나, 기여를 위해 소스코드를 직접 다운로드 받으실 수도 있습니다.
 꾸준한 업그레이드를 위해 Git 도구를 이용하여 GitHub 저장소에서 복제받는 방법을 권장합니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">shineware</span><span class="o">/</span><span class="n">PyKOMORAN</span>
@@ -254,11 +254,11 @@ PyKOMORAN은 Python 2.7을 지원하지 않도록 개발되었습니다.</p>
 </pre></div>
 </div>
 <div class="admonition seealso">
-<p class="first admonition-title">더 보기</p>
+<p class="first admonition-title">See also</p>
 <p class="last">Git 도구 홈페이지에서 <a class="reference external" href="https://git-scm.com/book/ko/">사용법</a> 을 익히실 수 있습니다.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">주석</p>
+<p class="first admonition-title">Note</p>
 <p class="last">특정 버전의 PyKOMORAN을 다운로드 받으실 때는 <a class="reference external" href="https://github.com/shineware/PyKOMORAN/releases">GitHub 저장소의 배포 메뉴</a>
 를 이용하시면 버전별로 압축된 소스코드를 다운로드 받으실 수 있습니다.</p>
 </div>
@@ -311,7 +311,6 @@ PyKOMORAN은 Python 2.7을 지원하지 않도록 개발되었습니다.</p>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
     
 
   
