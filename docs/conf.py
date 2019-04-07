@@ -24,11 +24,12 @@ copyright = '2019, SHINEWARE TEAM'
 author = 'Junghwan Park'
 
 # The short X.Y version
-version = ''
+from PyKomoran import __version__
+version = __version__
 # The full version, including alpha/beta/rc tags
-release = ''
+release = version
 
-site_url = 'https://docs.komoran.kr'
+site_url = 'https://pydocs.komoran.kr/'
 
 
 # -- General configuration ---------------------------------------------------
@@ -67,7 +68,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'ko'
+# language = 'ko'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -91,7 +92,7 @@ html_theme = 'sphinx_rtd_theme'
 #
 html_theme_options = {
     # 'canonical_url': '',
-    'analytics_id': 'UA-99586710-2',
+    'analytics_id': 'UA-99586710-4',
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
@@ -130,7 +131,7 @@ html_baseurl = site_url
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'KOMORANDocs'
+htmlhelp_basename = 'PyKOMORAN'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -157,8 +158,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'KOMORANDocs.tex', 'KOMORAN Documents',
-     'shineware', 'manual'),
+    (master_doc, 'PyKOMORAN.tex', 'PyKOMORAN Documents',
+     'SHINEWARE', 'manual'),
 ]
 
 
@@ -167,7 +168,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'komorandocs', 'KOMORAN Documents',
+    (master_doc, 'PyKOMORAN', 'PyKOMORAN Documents',
      [author], 1)
 ]
 
@@ -178,8 +179,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'KOMORANDocs', 'KOMORAN Documents',
-     author, 'KOMORANDocs', 'One line description of project.',
+    (master_doc, 'PyKOMORAN', 'PyKOMORAN Documents',
+     author, 'PyKOMORAN', 'Use KOMORAN in Python',
      'Miscellaneous'),
 ]
 
@@ -205,7 +206,7 @@ epub_exclude_files = ['search.html']
 # -- Extension configuration -------------------------------------------------
 # JavaSphinx
 javadoc_url_map = {
-    'kr.co.shineware.nlp.komoran': ('https://9bow.github.io/KOMORANJavaDoc/', 'javadoc'),
+    'kr.co.shineware.nlp.komoran': ('https://docs.komoran.kr/api', 'sphinx'),
     'py4j': ('https://www.py4j.org/_static/javadoc', 'javadoc'),
 }
 
