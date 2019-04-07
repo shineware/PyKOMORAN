@@ -6,8 +6,8 @@ class Token:
 
     Args:
         token_in_dict (dict): Token으로 만들 Dict
-        use_pos_name (bool): Token 출력 시 품사 이름 사용 여부 (기본값: ``False``)
-                            ``True`` 인 경우 품사 기호 대신 품사 이름을 사용합니다.
+        use_pos_name (bool): Token 출력 시 품사 이름 사용 여부 (기본값: ``False``) \n
+                            ``True`` 인 경우 품사 기호 대신 품사 이름을 사용합니다. \n
                             ``False`` 인 경우 품사 기호를 사용합니다.
 
     Attributes:
@@ -143,7 +143,7 @@ class Pair:
 
 
 class Pos:
-    """형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다.
+    """형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다. \n
     전체 품사표는 :doc:`/firststep/postypes` 를 참고해주세요.
 
     Attributes:
