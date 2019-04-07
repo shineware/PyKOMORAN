@@ -145,7 +145,6 @@ public class KomoranEntryPoint {
      *
      * @return      형태소 분석 결과의 Map(Token) List
      * @see         kr.co.shineware.nlp.komoran.model.KomoranResult
-     * @see         kr.co.shineware.nlp.komoran.model.Token
      */
     public List<Map<String, Object>> getTokenList() {
         // @formatter:off
@@ -162,7 +161,6 @@ public class KomoranEntryPoint {
      *
      * @return      형태소 분석 결과의 Map(Pair) List
      * @see         kr.co.shineware.nlp.komoran.model.KomoranResult
-     * @see         kr.co.shineware.util.common.model.Pair
      */
     public List<Map<String, String>> getList() {
         // @formatter:off
@@ -178,7 +176,6 @@ public class KomoranEntryPoint {
      *
      * @param       token Token 객체
      * @return      Map(Token) 객체
-     * @see         kr.co.shineware.nlp.komoran.model.Token
      */
     private Map<String, Object> convertTokenToMap(Token token) {
         return new HashMap<String, Object>() {{
@@ -194,7 +191,6 @@ public class KomoranEntryPoint {
      *
      * @param       pair Pair 객체
      * @return      Map(Pair) 객체
-     * @see         kr.co.shineware.util.common.model.Pair
      */
     private Map<String, String> convertPairToMap(Pair pair) {
         return new HashMap<String, String>() {{
