@@ -143,12 +143,6 @@ class Komoran:
         return list(self._komoran.getNouns())
 
     @_validate_initialized
-    def get_morphes(self, sentence):
-        """
-        """
-        return self.get_morphes_by_tags(sentence, list(self.pos_table))
-
-    @_validate_initialized
     def get_morphes_by_tags(self, sentence, tag_list=None):
         """입력 문장의 형태소 분석 결과 중, 주어진 품사들만 반환합니다. 주어진 품사가 없을 경우 전체 형태소를 반환합니다.
 
