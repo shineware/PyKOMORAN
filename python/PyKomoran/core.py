@@ -11,7 +11,6 @@ __all__ = ['Komoran']
 class KomoranError(Exception):
     """
     Komoran Class에서 발생하는 예외상황을 위한 Exception
-    Handle exceptions occur in Komoran Class
     """
 
     def __init__(self, args=None, cause=None):
@@ -152,12 +151,12 @@ class Komoran:
 
         Args:
             sentence (str): 분석할 문장
-            flatten (bool): 어절 무시 여부 (기본값: ``True``)
-                            | ``True`` 인 경우 어절을 무시하고 하나의 List로 반환합니다.
-                            | ``False`` 인 경우 어절별로 List를 만들어 List of List로 반환합니다.
-            use_pos_name (bool): 품사 이름 사용 여부 (기본값: ``False``)
-                                | ``True`` 인 경우 품사 기호 대신 품사 이름을 사용합니다.
-                                | ``False`` 인 경우 품사 기호를 사용합니다.
+            flatten (bool): 어절 무시 여부 (기본값: ``True``) \n
+                            ``True`` 인 경우 어절을 무시하고 하나의 List로 반환합니다. \n
+                            ``False`` 인 경우 어절별로 List를 만들어 List of List로 반환합니다.
+            use_pos_name (bool): 품사 이름 사용 여부 (기본값: ``False``) \n
+                                ``True`` 인 경우 품사 기호 대신 품사 이름을 사용합니다. \n
+                                ``False`` 인 경우 품사 기호를 사용합니다.
 
         Returns:
             list: 형태소 Token(:meth:`PyKomoran.type.Token`)의 List

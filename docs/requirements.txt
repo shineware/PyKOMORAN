@@ -1,0 +1,5 @@
+Sphinx==1.8.4
+sphinx-rtd-theme==0.4.2
+sphinx-sitemap==1.0.2
+sphinxcontrib-napoleon
+javasphinx==0.9.15
