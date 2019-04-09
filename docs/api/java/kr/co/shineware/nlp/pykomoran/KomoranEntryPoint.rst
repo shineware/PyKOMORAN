@@ -67,7 +67,7 @@ getList
 
    :return: 형태소 분석 결과의 Map(Pair) List
 
-   **See also:** :java:ref:`kr.co.shineware.nlp.komoran.model.KomoranResult`, :java:ref:`kr.co.shineware.util.common.model.Pair`
+   **See also:** :java:ref:`kr.co.shineware.nlp.komoran.model.KomoranResult`
 
 getMorphesByTags
 ^^^^^^^^^^^^^^^^
@@ -116,7 +116,7 @@ getTokenList
 
    :return: 형태소 분석 결과의 Map(Token) List
 
-   **See also:** :java:ref:`kr.co.shineware.nlp.komoran.model.KomoranResult`, :java:ref:`kr.co.shineware.nlp.komoran.model.Token`
+   **See also:** :java:ref:`kr.co.shineware.nlp.komoran.model.KomoranResult`
 
 init
 ^^^^
