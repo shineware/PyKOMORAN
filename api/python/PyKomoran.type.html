@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PyKomoran.type module &mdash; PyKOMORAN  documentation</title>
+  <title>PyKomoran.type module &mdash; PyKOMORAN 0.1.2 documentation</title>
   
 
   
@@ -93,6 +93,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="PyKomoran.html">PyKomoran package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="PyKomoran.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="PyKomoran.cli.html">PyKomoran.cli module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="PyKomoran.core.html">PyKomoran.core module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="PyKomoran.jvm.html">PyKomoran.jvm module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">PyKomoran.type module</a></li>
@@ -185,84 +186,15 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>token_in_dict</strong> (<em>dict</em>) – Token으로 만들 Dict</li>
-<li><strong>use_pos_name</strong> (<em>bool</em>) – Token 출력 시 품사 이름 사용 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">False</span></code>)
-<code class="docutils literal notranslate"><span class="pre">True</span></code> 인 경우 품사 기호 대신 품사 이름을 사용합니다.
-<code class="docutils literal notranslate"><span class="pre">False</span></code> 인 경우 품사 기호를 사용합니다.</li>
+<li><strong>use_pos_name</strong> (<em>bool</em>) – <p>Token 출력 시 품사 이름 사용 여부 (기본값: <code class="docutils literal notranslate"><span class="pre">False</span></code>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">True</span></code> 인 경우 품사 기호 대신 품사 이름을 사용합니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">False</span></code> 인 경우 품사 기호를 사용합니다.</p>
+</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="PyKomoran.type.Token.morph">
-<code class="descname">morph</code><a class="headerlink" href="#PyKomoran.type.Token.morph" title="Permalink to this definition">¶</a></dt>
-<dd><p>형태소</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="PyKomoran.type.Token.pos">
-<code class="descname">pos</code><a class="headerlink" href="#PyKomoran.type.Token.pos" title="Permalink to this definition">¶</a></dt>
-<dd><p>품사</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="PyKomoran.type.Token.begin_index">
-<code class="descname">begin_index</code><a class="headerlink" href="#PyKomoran.type.Token.begin_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>형태소의 시작 인덱스</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="PyKomoran.type.Token.end_index">
-<code class="descname">end_index</code><a class="headerlink" href="#PyKomoran.type.Token.end_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>형태소의 종료 인덱스</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="PyKomoran.type.Token.use_pos_name">
-<code class="descname">use_pos_name</code><a class="headerlink" href="#PyKomoran.type.Token.use_pos_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>품사 이름 사용 여부</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># komoran은 Komoran 객체입니다.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">tokens</span> <span class="o">=</span> <span class="n">komoran</span><span class="o">.</span><span class="n">get_token_list</span><span class="p">(</span><span class="s2">&quot;① 대한민국은 민주공화국이다.&quot;</span><span class="p">)</span>
@@ -358,34 +290,6 @@
 </tr>
 </tbody>
 </table>
-<dl class="attribute">
-<dt id="PyKomoran.type.Pair.first">
-<code class="descname">first</code><a class="headerlink" href="#PyKomoran.type.Pair.first" title="Permalink to this definition">¶</a></dt>
-<dd><p>형태소</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="PyKomoran.type.Pair.second">
-<code class="descname">second</code><a class="headerlink" href="#PyKomoran.type.Pair.second" title="Permalink to this definition">¶</a></dt>
-<dd><p>품사</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># komoran은 Komoran 객체입니다.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pairs</span> <span class="o">=</span> <span class="n">komoran</span><span class="o">.</span><span class="n">get_list</span><span class="p">(</span><span class="s2">&quot;① 대한민국은 민주공화국이다.&quot;</span><span class="p">)</span>
@@ -436,22 +340,8 @@
 <dt id="PyKomoran.type.Pos">
 <em class="property">class </em><code class="descclassname">PyKomoran.type.</code><code class="descname">Pos</code><a class="headerlink" href="#PyKomoran.type.Pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다.
-전체 품사표는 <a class="reference internal" href="../../firststep/postypes.html"><span class="doc">품사표 (PoS Table)</span></a> 를 참고해주세요.</p>
-<dl class="attribute">
-<dt id="PyKomoran.type.Pos.pos_table">
-<code class="descname">pos_table</code><a class="headerlink" href="#PyKomoran.type.Pos.pos_table" title="Permalink to this definition">¶</a></dt>
-<dd><p>품사 사전</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">dict</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+<p>형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다.</p>
+<p>전체 품사표는 <a class="reference internal" href="../../firststep/postypes.html"><span class="doc">품사표 (PoS Table)</span></a> 를 참고해주세요.</p>
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pos_table</span> <span class="o">=</span> <span class="n">Pos</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">pos</span><span class="p">[</span><span class="s1">&#39;NNP&#39;</span><span class="p">]</span>
@@ -462,6 +352,26 @@
 <span class="go">45</span>
 </pre></div>
 </div>
+<dl class="method">
+<dt id="PyKomoran.type.Pos.has_key">
+<code class="descname">has_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pos.has_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Pos.items">
+<code class="descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pos.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Pos.keys">
+<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pos.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="PyKomoran.type.Pos.values">
+<code class="descname">values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.type.Pos.values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>

@@ -6,6 +6,7 @@ Submodules
 
 .. toctree::
 
+   PyKomoran.cli
    PyKomoran.core
    PyKomoran.jvm
    PyKomoran.type

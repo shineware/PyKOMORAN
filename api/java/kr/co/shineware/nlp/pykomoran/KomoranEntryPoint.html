@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>KomoranEntryPoint &mdash; PyKOMORAN  documentation</title>
+  <title>KomoranEntryPoint &mdash; PyKOMORAN 0.1.2 documentation</title>
   
 
   
@@ -173,7 +173,8 @@
 <dl class="type">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint">
 public class <code class="descname">KomoranEntryPoint</code><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>KOMORAN을 Wrapping하는 Class로, Py4J에 의해 불리는 Java-side의 EntryPoint입니다. 직접 실행 시 main 메소드에서 Py4J의 GatewayServer를 띄웁니다. 사용법:</p>
+<dd><p>KOMORAN을 Wrapping하는 Class로, Py4J에 의해 불리는 Java-side의 EntryPoint입니다. 직접 실행 시 <code class="docutils literal notranslate"><span class="pre">main</span></code> 메소드에서 Py4J의 GatewayServer를 생성합니다.</p>
+<p>사용법은 아래와 같습니다.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">KomoranEntryPoint</span> <span class="n">kep</span> <span class="o">=</span> <span class="n">new</span> <span class="n">KomoranEntryPoint</span><span class="p">();</span>
 <span class="n">kep</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">MODEL_PATH</span><span class="p">);</span>
 </pre></div>
@@ -186,7 +187,7 @@ public class <code class="descname">KomoranEntryPoint</code><a class="headerlink
 </tr>
 </tbody>
 </table>
-<p><strong>See also:</strong> <a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/core/Komoran.html" title="kr.co.shineware.nlp.komoran.core.Komoran"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.core.Komoran</span></code></a>, <a class="reference external" href="https://www.py4j.org/_static/javadoc/py4j/GatewayServer.html" title="py4j.GatewayServer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">py4j.GatewayServer</span></code></a></p>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/core/Komoran.html" title="kr.co.shineware.nlp.komoran.core.Komoran"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.core.Komoran</span></code></a>, <a class="reference external" href="https://www.py4j.org/_static/javadoc/py4j/GatewayServer.html" title="py4j.GatewayServer"><code class="xref java java-ref docutils literal notranslate"><span class="pre">py4j.GatewayServer</span></code></a></p>
 </dd></dl>
 
 <div class="section" id="methods">
@@ -204,7 +205,7 @@ public void <code class="descname">KomoranEntryPoint</code><span class="sig-pare
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.analyze(String)">
 public void <code class="descname">analyze</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.analyze(String)" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 Komoran 객체에 주어진 sentence를 분석하여 내부 KomoranResult 객체에 저장합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">Komoran</span></code> 객체에 주어진 sentence를 분석하여 내부 <code class="docutils literal notranslate"><span class="pre">KomoranResult</span></code> 객체에 저장합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -216,6 +217,7 @@ public void <code class="descname">analyze</code><span class="sig-paren">(</span
 </tr>
 </tbody>
 </table>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/model/KomoranResult.html" title="kr.co.shineware.nlp.komoran.model.KomoranResult"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.KomoranResult</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -224,7 +226,7 @@ public void <code class="descname">analyze</code><span class="sig-paren">(</span
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getList()">
 public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt;&gt; <code class="descname">getList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getList()" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 KomoranResult 객체로부터 분석 결과를 Pair 형태로 반환받습니다. Python에서 이용할 수 있도록 Token 객체는 Map 객체로 변환하여 제공합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">KomoranResult</span></code> 객체로부터 분석 결과를 <code class="docutils literal notranslate"><span class="pre">Pair</span></code> 형태로 반환받습니다. Python에서 이용할 수 있도록 <code class="docutils literal notranslate"><span class="pre">Pair</span></code> 객체는 Map 객체로 변환하여 제공합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -233,7 +235,7 @@ public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com
 </tr>
 </tbody>
 </table>
-<p><strong>See also:</strong> <code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.util.common.model.Pair</span></code></p>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/model/KomoranResult.html" title="kr.co.shineware.nlp.komoran.model.KomoranResult"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.KomoranResult</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -242,7 +244,7 @@ public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getMorphesByTags(List)">
 public List&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt; <code class="descname">getMorphesByTags</code><span class="sig-paren">(</span>List&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt;<em> targetPosCollection</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getMorphesByTags(List)" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 KomoranResult 객체로부터 주어진 품사의 형태소들만 반환받습니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">KomoranResult</span></code> 객체로부터 주어진 품사의 형태소들만 반환받습니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -257,6 +259,7 @@ public List&lt;<a class="reference external" href="http://docs.oracle.com/javase
 </tr>
 </tbody>
 </table>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/model/KomoranResult.html" title="kr.co.shineware.nlp.komoran.model.KomoranResult"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.KomoranResult</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -265,7 +268,7 @@ public List&lt;<a class="reference external" href="http://docs.oracle.com/javase
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getNouns()">
 public List&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>&gt; <code class="descname">getNouns</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getNouns()" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 KomoranResult 객체로부터 명사류의 형태소만 반환받습니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">KomoranResult</span></code> 객체로부터 명사류의 형태소만 반환받습니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -274,6 +277,7 @@ public List&lt;<a class="reference external" href="http://docs.oracle.com/javase
 </tr>
 </tbody>
 </table>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/model/KomoranResult.html" title="kr.co.shineware.nlp.komoran.model.KomoranResult"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.KomoranResult</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -282,7 +286,7 @@ public List&lt;<a class="reference external" href="http://docs.oracle.com/javase
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getPlainText()">
 public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">getPlainText</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getPlainText()" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 KomoranResult 객체로부터 PlainText 형태의 분석 결과를 반환받습니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">KomoranResult</span></code> 객체로부터 PlainText 형태의 분석 결과를 반환받습니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -291,6 +295,7 @@ public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/
 </tr>
 </tbody>
 </table>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/model/KomoranResult.html" title="kr.co.shineware.nlp.komoran.model.KomoranResult"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.KomoranResult</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -299,7 +304,7 @@ public <a class="reference external" href="http://docs.oracle.com/javase/8/docs/
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getTokenList()">
 public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a>, <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="java.lang.Object">Object</a>&gt;&gt; <code class="descname">getTokenList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.getTokenList()" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 KomoranResult 객체로부터 분석 결과를 Token 형태로 반환받습니다. Python에서 이용할 수 있도록 Token 객체는 Map 객체로 변환하여 제공합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">KomoranResult</span></code> 객체로부터 분석 결과를 <code class="docutils literal notranslate"><span class="pre">Token</span></code> 형태로 반환받습니다. Python에서 이용할 수 있도록 <code class="docutils literal notranslate"><span class="pre">Token</span></code> 객체는 Map 객체로 변환하여 제공합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -308,7 +313,7 @@ public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com
 </tr>
 </tbody>
 </table>
-<p><strong>See also:</strong> <a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/model/Token.html" title="kr.co.shineware.nlp.komoran.model.Token"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.Token</span></code></a></p>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/model/KomoranResult.html" title="kr.co.shineware.nlp.komoran.model.KomoranResult"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.KomoranResult</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -317,7 +322,7 @@ public List&lt;Map&lt;<a class="reference external" href="http://docs.oracle.com
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.init(String)">
 public void <code class="descname">init</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> modelPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.init(String)" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 Komoran 객체를 modelPath로 초기화합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">Komoran</span></code> 객체를 <code class="docutils literal notranslate"><span class="pre">modelPath</span></code>로 초기화합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -334,7 +339,7 @@ public void <code class="descname">init</code><span class="sig-paren">(</span><a
 </tr>
 </tbody>
 </table>
-<p><strong>See also:</strong> <a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/model/Token.html" title="kr.co.shineware.nlp.komoran.model.Token"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.model.Token</span></code></a></p>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/core/Komoran.html" title="kr.co.shineware.nlp.komoran.core.Komoran"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.core.Komoran</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -342,8 +347,8 @@ public void <code class="descname">init</code><span class="sig-paren">(</span><a
 <h3>initByModel<a class="headerlink" href="#initbymodel" title="Permalink to this headline">¶</a></h3>
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.initByModel(DEFAULT_MODEL)">
-public void <code class="descname">initByModel</code><span class="sig-paren">(</span><a class="reference external" href="https://9bow.github.io/KOMORANJavaDoc/kr/co/shineware/nlp/komoran/constant/DEFAULT_MODEL.html" title="kr.co.shineware.nlp.komoran.constant.DEFAULT_MODEL">DEFAULT_MODEL</a><em> modelType</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.initByModel(DEFAULT_MODEL)" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 Komoran 객체를 기본 modelType으로 초기화합니다. modelType은 KOMORAN의 DEFAULT_MODEL 타입입니다.</p>
+public void <code class="descname">initByModel</code><span class="sig-paren">(</span><a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/constant/DEFAULT_MODEL.html" title="kr.co.shineware.nlp.komoran.constant.DEFAULT_MODEL">DEFAULT_MODEL</a><em> modelType</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.initByModel(DEFAULT_MODEL)" title="Permalink to this definition">¶</a></dt>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">Komoran</span></code> 객체를 기본 <code class="docutils literal notranslate"><span class="pre">modelType</span></code> 초기화합니다. <code class="docutils literal notranslate"><span class="pre">modelType</span></code> KOMORAN의 DEFAULT_MODEL 타입입니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -355,6 +360,7 @@ public void <code class="descname">initByModel</code><span class="sig-paren">(</
 </tr>
 </tbody>
 </table>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/core/Komoran.html" title="kr.co.shineware.nlp.komoran.core.Komoran"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.core.Komoran</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -363,7 +369,7 @@ public void <code class="descname">initByModel</code><span class="sig-paren">(</
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.isInitialized()">
 public boolean <code class="descname">isInitialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.isInitialized()" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 Komoran 객체가 초기화되었는지 확인합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">Komoran</span></code> 객체가 초기화되었는지 확인합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -372,6 +378,7 @@ public boolean <code class="descname">isInitialized</code><span class="sig-paren
 </tr>
 </tbody>
 </table>
+<p><strong>See also:</strong> <a class="reference external" href="https://docs.komoran.kr/api/kr/co/shineware/nlp/komoran/core/Komoran.html" title="kr.co.shineware.nlp.komoran.core.Komoran"><code class="xref java java-ref docutils literal notranslate"><span class="pre">kr.co.shineware.nlp.komoran.core.Komoran</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -401,7 +408,7 @@ public static void <code class="descname">main</code><span class="sig-paren">(</
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setFWDic(String)">
 public void <code class="descname">setFWDic</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> fwDicPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setFWDic(String)" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 Komoran 객체에 기분석 사전을 적용합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">Komoran</span></code> 객체에 기분석 사전을 적용합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -421,7 +428,7 @@ public void <code class="descname">setFWDic</code><span class="sig-paren">(</spa
 <dl class="method">
 <dt id="kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setUserDic(String)">
 public void <code class="descname">setUserDic</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> userDicPath</em><span class="sig-paren">)</span><a class="headerlink" href="#kr.co.shineware.nlp.pykomoran.KomoranEntryPoint.setUserDic(String)" title="Permalink to this definition">¶</a></dt>
-<dd><p>내부 Komoran 객체에 사용자 사전을 적용합니다.</p>
+<dd><p>내부 <code class="docutils literal notranslate"><span class="pre">Komoran</span></code> 객체에 사용자 사전을 적용합니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

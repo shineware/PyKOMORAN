@@ -1,0 +1,7 @@
+PyKomoran.cli module
+====================
+
+.. automodule:: PyKomoran.cli
+    :members:
+    :undoc-members:
+    :show-inheritance:
