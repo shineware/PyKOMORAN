@@ -1,10 +1,9 @@
 # PyKOMORAN
 
-[![DOI](https://zenodo.org/badge/175813952.svg)](https://doi.org/10.5281/zenodo.2619177)
-![PyPI](https://img.shields.io/pypi/v/PyKomoran.svg)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyKomoran.svg)
-![Downloads](https://img.shields.io/pypi/dm/PyKomoran.svg)
-![License](https://img.shields.io/github/license/shineware/PyKOMORAN.svg)
+[![PyPI](https://img.shields.io/pypi/v/PyKomoran.svg)](https://pypi.org/project/PyKomoran)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyKomoran.svg)](https://pypi.org/project/PyKomoran)
+[![Downloads](https://img.shields.io/pypi/dm/PyKomoran.svg)](https://pypi.org/project/PyKomoran)
+[![License](https://img.shields.io/github/license/shineware/PyKOMORAN.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 [[한국어](README.md)] | [[English](README.en.md)]
 
@@ -40,9 +39,9 @@
   cp -r PyKOMORAN/python/PyKomoran [사용하실 PROJECT 위치]
 ```
 
-* 자세한 설치 방법은 [KOMORAN 문서 사이트](https://docs.komoran.kr/pykomoran/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)를 참고해주세요.
+* 자세한 설치 방법은 [KOMORAN 문서 사이트](https://pydocs.komoran.kr/firststep/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)를 참고해주세요.
 
-## 사용법
+## 사용
 
 ### 빠른 사용 방법
 
@@ -63,21 +62,28 @@
 
 ### 자세한 사용법
 
-* 자세한 사용방법은 [KOMORAN 문서 사이트](https://docs.komoran.kr/pykomoran/tutorial.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)를 확인해주시기 바랍니다.
+* 자세한 사용방법은 [KOMORAN 문서 사이트](https://pydocs.komoran.kr/firststep/tutorial.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)를 확인해주시기 바랍니다.
 
-## 인용하기
+## 인용
 
-* PyKOMORAN은 [Zenodo](https://zenodo.org)를 이용하여 DOI(Digital Object Identifier)를 제공하고 있습니다.
-* PyKOMORAN을 인용하실 때에는 다음의 링크를 참고해주시기 바랍니다.
-  * [DOI JSON Export](https://zenodo.org/record/2619178/export/json)
-  * [DOI BibTeX Export](https://zenodo.org/record/2619178/export/hx)
+* 다음 BibTeX를 이용하여 인용해주세요.
+
+  ```tex
+  @misc{komoran,
+    author = {Junsoo Shin, Junghwan Park, Geunho Lee},
+    title = {KOMORAN},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/shineware/PyKOMORAN}}
+  }
+  ```
 
 ## 라이선스
 
 * PyKOMORAN은 KOMORAN과 동일한 Apache 2.0 라이선스로 배포됩니다.
 * 자세한 내용은 [LICENSE](LICENSE) 파일을 참고해주시기 바랍니다.
 
-## 기여하기
+## 기여
 
 * 소스 코드나 버그 리포트, 문서 내의 오타 수정 등 어떠한 기여도 환영합니다.
 * [Komoran Website](https://www.shineware.co.kr/products/komoran/#demo?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) 또는 [KOMORAN GitHub 페이지](https://github.com/komoran)를 참고해주세요!

@@ -1,10 +1,9 @@
 # PyKOMORAN
 
-[![DOI](https://zenodo.org/badge/175813952.svg)](https://doi.org/10.5281/zenodo.2619177)
-![PyPI](https://img.shields.io/pypi/v/PyKomoran.svg)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyKomoran.svg)
-![Downloads](https://img.shields.io/pypi/dm/PyKomoran.svg)
-![License](https://img.shields.io/github/license/shineware/PyKOMORAN.svg)
+[![PyPI](https://img.shields.io/pypi/v/PyKomoran.svg)](https://pypi.org/project/PyKomoran)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyKomoran.svg)](https://pypi.org/project/PyKomoran)
+[![Downloads](https://img.shields.io/pypi/dm/PyKomoran.svg)](https://pypi.org/project/PyKomoran)
+[![License](https://img.shields.io/github/license/shineware/PyKOMORAN.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 [[한국어](README.md)] | [[English](README.en.md)]
 
@@ -40,7 +39,7 @@
     cp -r PyKOMORAN/python/PyKomoran [DEST_LOCATION_TO_YOUR_PROJECT]
 ```
 
-* Please refer to [installation document](https://docs.komoran.kr/pykomoran/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) for detailed installation method.
+* Please refer to [installation document](https://pydocs.komoran.kr/firststep/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) for detailed installation method.
 
 ## Usage
 
@@ -63,14 +62,21 @@
 
 ### Usage in detail
 
-* Please refer [KOMORAN Document site](https://docs.komoran.kr/pykomoran/tutorial.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) for more information.
+* Please refer [KOMORAN Document site](https://pydocs.komoran.kr/firststep/tutorial.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran) for more information.
 
 ## Citation
 
-* PyKOMORAN provide DOI(Digital Object Identifier) using [Zenodo](https://zenodo.org).
-* Please refer below links when citing PyKOMORAN.
-  * [DOI JSON Export](https://zenodo.org/record/2619178/export/json)
-  * [DOI BibTeX Export](https://zenodo.org/record/2619178/export/hx)
+* Please use BibTeX below.
+
+  ```tex
+  @misc{komoran,
+    author = {Junsoo Shin, Junghwan Park, Geunho Lee},
+    title = {KOMORAN},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/shineware/PyKOMORAN}}
+  }
+  ```
 
 ## License
 
