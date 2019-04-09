@@ -88,7 +88,7 @@ def test_to_pos_table():
     Type Test: check pos_table is initialized well
     :return:
     """
-    global pos_table
+    pos_table = Pos()
 
     assert len(pos_table) == 45
     assert pos_table['NNP'] == '고유 명사'
