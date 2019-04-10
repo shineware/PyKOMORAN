@@ -1,6 +1,5 @@
-
-# Created by https://www.gitignore.io/api/git,macos,node,pycharm,python,phpstorm,laravel,virtualenv,android,apachecordova,appengine,django,git,gradle,jetbrains,linux,visualstudiocode,intellij+all
-# Edit at https://www.gitignore.io/?templates=git,macos,node,pycharm,python,phpstorm,laravel,virtualenv,android,apachecordova,appengine,django,git,gradle,jetbrains,linux,visualstudiocode,intellij+all
+# Created by https://www.gitignore.io/api/git,node,linux,macos,gradle,django,python,android,pycharm,laravel,eclipse,phpstorm,jetbrains,appengine,code-java,virtualenv,intellij+all,apachecordova,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=git,node,linux,macos,gradle,django,python,android,pycharm,laravel,eclipse,phpstorm,jetbrains,appengine,code-java,virtualenv,intellij+all,apachecordova,visualstudiocode
 
 ### Android ###
 # Built application files
@@ -100,6 +99,13 @@ platforms/*
 ### AppEngine ###
 # Google App Engine generated folder
 appengine-generated/
+
+### Code-Java ###
+# Language Support for Java(TM) by Red Hat extension for Visual Studio Code - https://marketplace.visualstudio.com/items?itemName=redhat.java
+
+.project
+.classpath
+factoryConfiguration.json
 
 ### Django ###
 *.pot
@@ -231,6 +237,71 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+### Eclipse ###
+.metadata
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+### Eclipse Patch ###
+# Eclipse Core
+
+# JDT-specific (Eclipse Java Development Tools)
+
+# Annotation Processing
+.apt_generated
+
+.sts4-cache/
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -727,4 +798,4 @@ gradle-app.setting
 ### Gradle Patch ###
 **/build/
 
-# End of https://www.gitignore.io/api/git,macos,node,pycharm,python,phpstorm,laravel,virtualenv,android,apachecordova,appengine,django,git,gradle,jetbrains,linux,visualstudiocode,intellij+all
+# End of https://www.gitignore.io/api/git,node,linux,macos,gradle,django,python,android,pycharm,laravel,eclipse,phpstorm,jetbrains,appengine,code-java,virtualenv,intellij+all,apachecordova,visualstudiocode

@@ -1,4 +1,4 @@
-__all__ = ['Token', 'Pair', 'Pos', 'pos_table']
+__all__ = ['Token', 'Pair', 'Pos']
 
 
 class Token:
@@ -9,13 +9,6 @@ class Token:
         use_pos_name (bool): Token 출력 시 품사 이름 사용 여부 (기본값: ``False``) \n
                             ``True`` 인 경우 품사 기호 대신 품사 이름을 사용합니다. \n
                             ``False`` 인 경우 품사 기호를 사용합니다.
-
-    Attributes:
-        morph (str): 형태소
-        pos (str): 품사
-        begin_index (int): 형태소의 시작 인덱스
-        end_index (int): 형태소의 종료 인덱스
-        use_pos_name (bool): 품사 이름 사용 여부
 
     Examples:
 
@@ -35,6 +28,7 @@ class Token:
 
     """
     def __init__(self, token_in_dict, use_pos_name=False):
+        self.pos_table = Pos()
         self.morph = token_in_dict.get('morph')
         self.pos = token_in_dict.get('pos')
         self.begin_index = token_in_dict.get('beginIndex')
@@ -56,7 +50,7 @@ class Token:
             str: 품사 기호 (또는 이름)
         """
         if self.use_pos_name:
-            return pos_table[self.pos]
+            return self.pos_table[self.pos]
         return self.pos
 
     def get_begin_index(self):
@@ -93,10 +87,6 @@ class Pair:
 
     Args:
         pair_in_dict (dict): Pair로 만들 Dict
-
-    Attributes:
-        first (str): 형태소
-        second (str): 품사
 
     Examples:
 
@@ -145,9 +135,6 @@ class Pair:
 class Pos:
     """형태소 분석 결과로 나올 수 있는 모든 품사들에 대한 정보를 갖고 있습니다. \n
     전체 품사표는 :doc:`/firststep/postypes` 를 참고해주세요.
-
-    Attributes:
-        pos_table (dict): 품사 사전
 
     Examples:
 
@@ -236,5 +223,23 @@ class Pos:
     def __contains__(self, pos):
         return pos in self.pos_type
 
+    def __iter__(self):
+        return iter(self.pos_table)
 
-pos_table = Pos()
+    def __str__(self):
+        return str(self.pos_table)
+
+    def __repr__(self):
+        return repr(self.pos_table)
+
+    def values(self):
+        return self.pos_table.values()
+
+    def keys(self):
+        return self.pos_table.keys()
+
+    def items(self):
+        return self.pos_table.items()
+
+    def has_key(self, key):
+        return key in self.pos_type

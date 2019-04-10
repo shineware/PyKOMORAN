@@ -23,7 +23,7 @@ def test_to_init_Komoran():
 
 def test_to_analyze_get_nouns():
     """
-    Core Test: analyze with get_nouns()
+    Core Test: analyze using get_nouns()
     :return:
     """
     global komoran
@@ -38,7 +38,22 @@ def test_to_analyze_get_nouns():
 
 def test_to_analyze_get_morphes_by_tags():
     """
-     Core Test: analyze with get_morphes_by_tags()
+     Core Test: analyze using get_morphes_by_tags() without tag_list list
+    :return:
+    """
+    global komoran
+    global str_to_analyze
+
+    morphes = komoran.get_morphes_by_tags(str_to_analyze)
+
+    assert isinstance(morphes, list)
+    assert len(morphes) == 25
+    assert morphes == list(['①', '대한민국', '은', '민주공화국', '이', '다', '.', '②', '대한민국', '의', '주권', '은', '국민', '에게', '있', '고', ',', '모든', '권력', '은', '국민', '으로부터', '나오', 'ㄴ다', '.'])
+
+
+def test_to_analyze_get_morphes_by_tags():
+    """
+     Core Test: analyze using get_morphes_by_tags()
     :return:
     """
     global komoran
@@ -53,7 +68,7 @@ def test_to_analyze_get_morphes_by_tags():
 
 def test_to_analyze_get_morphes_by_invalid_tags():
     """
-    Core Test: analyze with get_morphes_by_tags(tag_list=['INVALID','POS']) & invalid tag_list
+    Core Test: analyze using get_morphes_by_tags(tag_list=['INVALID','POS']) & invalid tag_list
     :return:
     """
     global komoran
@@ -68,7 +83,7 @@ def test_to_analyze_get_morphes_by_invalid_tags():
 
 def test_to_analyze_get_morphes_by_no_given_tags():
     """
-    Core Test: analyze with get_morphes_by_tags(tag_list=[])
+    Core Test: analyze using get_morphes_by_tags(tag_list=[])
     :return:
     """
     global komoran
@@ -83,7 +98,7 @@ def test_to_analyze_get_morphes_by_no_given_tags():
 
 def test_to_analyze_get_plain_text():
     """
-    Core Test: analyze with get_plain_text()
+    Core Test: analyze using get_plain_text()
     :return:
     """
     global komoran
@@ -99,7 +114,7 @@ def test_to_analyze_get_plain_text():
 
 def test_to_analyze_get_token_list_with_flatten():
     """
-    Core Test: analyze with get_token_list(flatten=False,use_pos_name=False)
+    Core Test: analyze using get_token_list(flatten=False,use_pos_name=False)
     :return:
     """
     global komoran
@@ -137,7 +152,7 @@ def test_to_analyze_get_token_list_with_flatten():
 
 def test_to_analyze_get_token_list_with_flatten_and_use_pos_name():
     """
-    Core Test: analyze with get_token_list(flatten=True,use_pos_name=True)
+    Core Test: analyze using get_token_list(flatten=True,use_pos_name=True)
     :return:
     """
     global komoran
@@ -175,7 +190,7 @@ def test_to_analyze_get_token_list_with_flatten_and_use_pos_name():
 
 def test_to_analyze_get_token_list_without_flatten():
     """
-    Core Test: analyze with get_token_list(flatten=False,use_pos_name=False)
+    Core Test: analyze using get_token_list(flatten=False,use_pos_name=False)
     :return:
     """
     global komoran
@@ -214,7 +229,7 @@ def test_to_analyze_get_token_list_without_flatten():
 
 def test_to_analyze_get_token_list_without_flatten_and_use_pos_name():
     """
-    Core Test: analyze with get_token_list(flatten=False,use_pos_name=True)
+    Core Test: analyze using get_token_list(flatten=False,use_pos_name=True)
     :return:
     """
     global komoran
@@ -253,7 +268,7 @@ def test_to_analyze_get_token_list_without_flatten_and_use_pos_name():
 
 def test_to_analyze_get_list():
     """
-    Core Test: analyze with get_list()
+    Core Test: analyze using get_list()
     :return:
     """
     global komoran
