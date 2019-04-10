@@ -49,7 +49,7 @@
 
 ```python
   from PyKomoran import *
-  komoran = Komoran()
+  komoran = Komoran(DEFAULT_MODEL['LIGHT'])
 ```
 
 * 분석 메소드를 이용하여 문장을 분석합니다.
@@ -57,7 +57,7 @@
 ```python
   komoran.get_plain_text("① 대한민국은 민주공화국이다.")
   # # 실행 결과
-  # ①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF
+  # '①/SW 대한민국/NNP 은/JX 민주/NNP 공화국/NNG 이/VCP 다/EF ./SF'
 ```
 
 ### 자세한 사용법
