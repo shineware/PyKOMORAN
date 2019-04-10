@@ -1,4 +1,6 @@
-__all__ = ['Token', 'Pair', 'Pos']
+import os
+
+__all__ = ['Token', 'Pair', 'Pos', 'DEFAULT_MODEL']
 
 
 class Token:
@@ -243,3 +245,30 @@ class Pos:
 
     def has_key(self, key):
         return key in self.pos_type
+
+
+class DefaultModel:
+    def __init__(self):
+        base_path = os.path.dirname(os.path.realpath(__file__))
+
+        self._models = {
+            'FULL': '{0}{1}models_full'.format(base_path, os.sep),
+            'LIGHT': "{0}{1}models_light".format(base_path, os.sep)
+        }
+
+    def __getitem__(self, model):
+        if model in self._models.keys():
+            return self._models[model]
+        else:
+            return ''
+
+    def __contains__(self, model):
+        return model in self._models
+
+    def __str__(self):
+        return str(self._models)
+
+    def __repr__(self):
+        return repr(self._models)
+
+DEFAULT_MODEL = DefaultModel()

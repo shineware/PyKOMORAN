@@ -15,7 +15,7 @@ def test_to_init_Komoran():
     """
     global komoran
 
-    komoran = Komoran(model_path='./models_full')
+    komoran = Komoran(DEFAULT_MODEL['FULL'])
 
     assert komoran is not None
     assert komoran._komoran.isInitialized()
@@ -306,7 +306,7 @@ def test_to_set_user_dic():
     global komoran
 
     if komoran is None:
-        komoran = Komoran(model_path='./models_full')
+        komoran = Komoran(DEFAULT_MODEL['FULL'])
 
     tokens = komoran.get_token_list("테스트 단어")
 
@@ -357,7 +357,7 @@ def test_to_set_fw_dic():
     global komoran
 
     if komoran is None:
-        komoran = Komoran(model_path='./models_full')
+        komoran = Komoran(DEFAULT_MODEL['FULL'])
 
     tokens = komoran.get_token_list("테스트")
 
