@@ -5,6 +5,7 @@ from PyKomoran import jvm
 from PyKomoran.type import Pair
 from PyKomoran.type import Token
 from PyKomoran.type import Pos
+from PyKomoran.type import DEFAULT_MODEL
 
 __all__ = ['Komoran']
 
@@ -26,29 +27,31 @@ class Komoran:
         max_heap (int): JVM의 Max Heap Size (기본값: ``1024``, 단위: ``MB``)
 
     Examples:
-        기본 모델(FULL, LIGHT) 외에 사용자가 직접 생성한 모델이 존재하는 곳의 ``절대 경로`` 를 이용하여 Komoran 객체를 생성할 수 있습니다.
+        기본 모델( ``DEFAULT_MODEL['FULL']`` , ``DEFAULT_MODEL['LIGHT']`` ) 외에 사용자가 직접 생성한 모델이 위치하는
+        ``절대 경로`` 를 이용하여 Komoran 객체를 생성할 수 있습니다.
 
-        >>> # DEFAULT_MODEL.FULL 로 Komoran 객체를 생성합니다.
-        >>> komoran_full = Komoran()
-        >>> # DEFAULT_MODEL.LIGHT 로 Komoran 객체를 생성합니다.
-        >>> komoran_light = Komoran("./models_light")
+        >>> # 기본으로 제공하는 LIGHT 모델로 Komoran 객체를 생성합니다.
+        >>> komoran = Komoran(DEFAULT_MODEL['LIGHT'])
+        >>> # 기본으로 제공하는 FULL 모델로 Komoran 객체를 생성합니다.
+        >>> komoran = Komoran(DEFAULT_MODEL['FULL'])
         >>> # 사용자가 미리 생성 모델로 Komoran 객체를 생성합니다.
-        >>> komoran_user = Komoran("/home/user/Komoran/Model")
+        >>> komoran_user = Komoran("/some/where/path/Komoran/Model")
 
     """
 
-    def __init__(self, model_path="./models_full", max_heap=1024):
-        self._base_path = os.path.dirname(os.path.realpath(__file__))
-        self._model_path = os.path.abspath(os.path.join(self._base_path, model_path))
+    def __init__(self, model_path, max_heap=1024):
+        if max_heap <= 0:
+            raise KomoranError("Heap size for JVM is too small!")
 
-        assert os.path.exists(self._model_path)
+        if not os.path.exists(model_path):
+            raise KomoranError("model does NOT exist!")
 
         self.pos_table = Pos()
 
         jvm.init_jvm(max_heap)
         self._komoran = jvm.get_jvm().kr.co.shineware.nlp.pykomoran.KomoranEntryPoint()
 
-        self._komoran.init(self._model_path)
+        self._komoran.init(model_path)
         if not self._komoran.isInitialized():
             raise KomoranError("Komoran is NOT initialized!")
 
@@ -287,7 +290,7 @@ class Komoran:
 
 
 if __name__ == '__main__':
-    komoran = Komoran(DEFAULT_MODELS['FULL'])
+    komoran = Komoran(DEFAULT_MODEL['FULL'])
     str_to_analyze = "① 대한민국은 민주공화국이다. ② 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다."
 
     print(komoran.get_nouns(str_to_analyze))
