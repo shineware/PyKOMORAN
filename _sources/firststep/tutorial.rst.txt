@@ -18,7 +18,7 @@
   :linenos:
 
   from PyKomoran import *
-  komoran = Komoran()
+  komoran = Komoran(DEFAULT_MODEL['FULL'])
   print(komoran.get_plain_text("KOMORAN은 한국어 형태소 분석기입니다."))
 
 실행 결과는 다음과 같습니다.
@@ -44,14 +44,23 @@ Python 명령어를 실행한 후, 다음과 같이 PyKomoran을 불러옵니다
 Komoran 객체 생성하기
 ---------------------------------------
 이제, 형태소 분석을 위한 ``Komoran`` 객체를 생성합니다.
+여기에서는 기본으로 제공하는 모델 중 FULL 모델을 불러오겠습니다.
 
 .. code-block:: python
   :linenos:
 
-  komoran = Komoran()
+  komoran = Komoran(DEFAULT_MODEL['FULL'])
 
 이 과정에서 Java 버전의 KOMORAN을 불러오게 되며, 약간의 시간이 소요됩니다.
 이제 ``Komoran`` 객체의 메소드를 이용하여 형태소를 분석할 수 있습니다.
+
+.. Note::
+  ``DEFAULT_MODEL`` 은 기본적으로 PyKomoran에 포함된 모델로, KOMORAN의 ``DEFAULT_MODEL`` 에 대응합니다.
+  즉, PyKOMORAN의 ``DEFAULT_MODEL['FULL']`` 과 ``DEFAULT_MODEL['LIGHT']`` 은 각각 KOMORAN의 ``DEFAULT_MODEL.FULL`` 과
+  ``DEFAULT_MODEL.LIGHT`` 에 대응합니다.
+
+.. TODO::
+  DFEAULT_MODEL에 대한 설명을 추가합니다.
 
 형태소 분석하기
 ---------------------------------------
@@ -80,7 +89,7 @@ PyKOMORAN은 KOMORAN에서 제공하는 다양한 형태의 형태소 분석 결
   from PyKomoran import *
 
   # Komoran 객체 생성
-  komoran = Komoran()
+  komoran = Komoran(DEFAULT_MODEL['FULL'])
 
   # 분석할 문장 준비
   str_to_analyze = "① 대한민국은 민주공화국이다. ② 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다."

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PyKomoran.core module &mdash; PyKOMORAN 0.1.2 documentation</title>
+  <title>PyKomoran.core module &mdash; PyKOMORAN 0.1.3 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="PyKomoran.jvm module" href="PyKomoran.jvm.html" />
-    <link rel="prev" title="PyKomoran.cli module" href="PyKomoran.cli.html" /> 
+    <link rel="prev" title="PyKomoran package" href="PyKomoran.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.1.2
+                0.1.3
               </div>
             
           
@@ -93,7 +93,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="PyKomoran.html">PyKomoran package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="PyKomoran.html#submodules">Submodules</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="PyKomoran.cli.html">PyKomoran.cli module</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">PyKomoran.core module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="PyKomoran.jvm.html">PyKomoran.jvm module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="PyKomoran.type.html">PyKomoran.type module</a></li>
@@ -177,7 +176,7 @@
 <span id="pykomoran-core-module"></span><h1>PyKomoran.core module<a class="headerlink" href="#module-PyKomoran.core" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="PyKomoran.core.Komoran">
-<em class="property">class </em><code class="descclassname">PyKomoran.core.</code><code class="descname">Komoran</code><span class="sig-paren">(</span><em>model_path='./models_full'</em>, <em>max_heap=1024</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">PyKomoran.core.</code><code class="descname">Komoran</code><span class="sig-paren">(</span><em>model_path</em>, <em>max_heap=1024</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Komoran(Java)의 Python Wrapper Class입니다.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -193,13 +192,14 @@
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<p>기본 모델(FULL, LIGHT) 외에 사용자가 직접 생성한 모델이 존재하는 곳의 <code class="docutils literal notranslate"><span class="pre">절대</span> <span class="pre">경로</span></code> 를 이용하여 Komoran 객체를 생성할 수 있습니다.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># DEFAULT_MODEL.FULL 로 Komoran 객체를 생성합니다.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">komoran_full</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c1"># DEFAULT_MODEL.LIGHT 로 Komoran 객체를 생성합니다.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">komoran_light</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">(</span><span class="s2">&quot;./models_light&quot;</span><span class="p">)</span>
+<p>기본 모델( <code class="docutils literal notranslate"><span class="pre">DEFAULT_MODEL['FULL']</span></code> , <code class="docutils literal notranslate"><span class="pre">DEFAULT_MODEL['LIGHT']</span></code> ) 외에 사용자가 직접 생성한 모델이 위치하는
+<code class="docutils literal notranslate"><span class="pre">절대</span> <span class="pre">경로</span></code> 를 이용하여 Komoran 객체를 생성할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 기본으로 제공하는 LIGHT 모델로 Komoran 객체를 생성합니다.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">komoran</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">(</span><span class="n">DEFAULT_MODEL</span><span class="p">[</span><span class="s1">&#39;LIGHT&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 기본으로 제공하는 FULL 모델로 Komoran 객체를 생성합니다.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">komoran</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">(</span><span class="n">DEFAULT_MODEL</span><span class="p">[</span><span class="s1">&#39;FULL&#39;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="c1"># 사용자가 미리 생성 모델로 Komoran 객체를 생성합니다.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">komoran_user</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">(</span><span class="s2">&quot;/home/user/Komoran/Model&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">komoran_user</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">(</span><span class="s2">&quot;/some/where/path/Komoran/Model&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -225,11 +225,6 @@
 </pre></div>
 </div>
 </dd></dl>
-
-<dl class="method">
-<dt id="PyKomoran.core.Komoran.get_morphes">
-<code class="descname">get_morphes</code><span class="sig-paren">(</span><em>sentence</em><span class="sig-paren">)</span><a class="headerlink" href="#PyKomoran.core.Komoran.get_morphes" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="method">
 <dt id="PyKomoran.core.Komoran.get_morphes_by_tags">
@@ -452,7 +447,7 @@
         <a href="PyKomoran.jvm.html" class="btn btn-neutral float-right" title="PyKomoran.jvm module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="PyKomoran.cli.html" class="btn btn-neutral" title="PyKomoran.cli module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="PyKomoran.html" class="btn btn-neutral" title="PyKomoran package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -53,7 +53,7 @@ PyKOMORAN은 Python 3.4 이상을 지원합니다. 사용하고 계신 Python �
 Py4J
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 `Py4J <https://www.py4j.org/>`_ 는 Java 버전의 KOMORAN을 Python에서 실행할 수 있도록 도와주는 Library입니다.
-아래 `pip 패키지 관리도구`_ 를 이용하여 PyKomoran을 설치하는 경우 **자동으로 함께 설치** 됩니다.
+아래 `pip 패키지 관리도구 <https://pypi.org/project/PyKomoran/>`_ 를 이용하여 PyKomoran을 설치하는 경우 **자동으로 함께 설치** 됩니다.
 
 pip 패키지 관리도구
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
