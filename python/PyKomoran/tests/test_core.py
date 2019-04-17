@@ -1,4 +1,5 @@
 import os
+
 import nose
 
 from PyKomoran.core import *
@@ -6,6 +7,19 @@ from PyKomoran.type import *
 
 str_to_analyze = "① 대한민국은 민주공화국이다. ② 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다."
 komoran = None
+
+
+def test_to_init_Komoran():
+    """
+    Core Test: init Komoran with default model (models_light)
+    :return:
+    """
+    global komoran
+
+    komoran = Komoran(DEFAULT_MODEL['LIGHT'])
+
+    assert komoran is not None
+    assert komoran._komoran.isInitialized()
 
 
 def test_to_init_Komoran():
@@ -48,7 +62,9 @@ def test_to_analyze_get_morphes_by_tags():
 
     assert isinstance(morphes, list)
     assert len(morphes) == 25
-    assert morphes == list(['①', '대한민국', '은', '민주공화국', '이', '다', '.', '②', '대한민국', '의', '주권', '은', '국민', '에게', '있', '고', ',', '모든', '권력', '은', '국민', '으로부터', '나오', 'ㄴ다', '.'])
+    assert morphes == list(
+        ['①', '대한민국', '은', '민주공화국', '이', '다', '.', '②', '대한민국', '의', '주권', '은', '국민', '에게', '있', '고', ',', '모든', '권력',
+         '은', '국민', '으로부터', '나오', 'ㄴ다', '.'])
 
 
 def test_to_analyze_get_morphes_by_tags():
@@ -357,48 +373,66 @@ def test_to_set_fw_dic():
     global komoran
 
     if komoran is None:
-        komoran = Komoran(DEFAULT_MODEL['FULL'])
+        komoran = Komoran(DEFAULT_MODEL['LIGHT'])
 
-    tokens = komoran.get_token_list("테스트")
+    tokens = komoran.get_token_list("눈이 감겼다")
 
     # @formatter:off
     assert isinstance(tokens, list)
-    assert len(tokens) == 1
-    assert isinstance(tokens[0], Token)
-    assert tokens[0] == Token({
-                            'morph': '테스트',
-                            'pos': 'NNP',
-                            'beginIndex': 0,
-                            'endIndex': 3
+    assert len(tokens) == 5
+    assert isinstance(tokens[2], Token)
+    assert tokens[2] == Token({
+                            'morph': '감기',
+                            'pos': 'VV',
+                            'beginIndex': 3,
+                            'endIndex': 5
+                        })
+    assert tokens[3] == Token({
+                            'morph': '었',
+                            'pos': 'EP',
+                            'beginIndex': 3,
+                            'endIndex': 5
+                        })
+    assert tokens[4] == Token({
+                            'morph': '다',
+                            'pos': 'EC',
+                            'beginIndex': 5,
+                            'endIndex': 6
                         })
     # @formatter:on
 
     base_path = os.path.dirname(os.path.realpath(__file__))
     komoran.set_fw_dic(os.path.join(base_path, "./test_data/fwd.user"))
 
-    tokens = komoran.get_token_list("테스트")
+    tokens = komoran.get_token_list("눈이 감겼다")
 
     # @formatter:off
     assert isinstance(tokens, list)
-    assert len(tokens) == 3
-    assert isinstance(tokens[0], Token)
-    assert tokens[0] == Token({
-                            'morph': '테',
-                            'pos': 'NNG',
-                            'beginIndex': 0,
-                            'endIndex': 3           # TODO: Check and fix KOMORAN
-                        })
-    assert tokens[1] == Token({
-                            'morph': '스',
-                            'pos': 'NNG',
-                            'beginIndex': 0,        # TODO: Check and fix KOMORAN
-                            'endIndex': 3           # TODO: Check and fix KOMORAN
-                        })
+    assert len(tokens) == 6
+    assert isinstance(tokens[2], Token)
     assert tokens[2] == Token({
-                            'morph': '트',
-                            'pos': 'NNG',
-                            'beginIndex': 0,        # TODO: Check and fix KOMORAN
-                            'endIndex': 3           # TODO: Check and fix KOMORAN
+                            'morph': '감',
+                            'pos': 'NNB',
+                            'beginIndex': 3,
+                            'endIndex': 6           # TODO: Check and fix KOMORAN
+                        })
+    assert tokens[3] == Token({
+                            'morph': '기',
+                            'pos': 'VCP',
+                            'beginIndex': 3,        # TODO: Check and fix KOMORAN
+                            'endIndex': 6           # TODO: Check and fix KOMORAN
+                        })
+    assert tokens[4] == Token({
+                            'morph': '었',
+                            'pos': 'EP',
+                            'beginIndex': 3,        # TODO: Check and fix KOMORAN
+                            'endIndex': 6           # TODO: Check and fix KOMORAN
+                        })
+    assert tokens[5] == Token({
+                            'morph': '다',
+                            'pos': 'EC',
+                            'beginIndex': 3,        # TODO: Check and fix KOMORAN
+                            'endIndex': 6           # TODO: Check and fix KOMORAN
                         })
     # @formatter:on
 

@@ -1,4 +1,5 @@
 import nose
+
 from PyKomoran.type import *
 
 
