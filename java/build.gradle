@@ -7,10 +7,15 @@ sourceCompatibility = '1.8'
 repositories {
     mavenCentral()
     maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-    compile 'com.github.shin285:KOMORAN:3.3.4'
+    // add released
+    // compile 'com.github.shin285:KOMORAN:3.3.4'
+    // add local file
+    compile name: 'KOMORAN-4e7b5ef'
     compile 'net.sf.py4j:py4j:0.10.8.1'
-
 }
