@@ -43,6 +43,11 @@ class Komoran:
         if max_heap <= 0:
             raise KomoranError("Heap size for JVM is too small!")
 
+        if model_path == 'STABLE':
+            model_path = DEFAULT_MODEL['LIGHT']
+        elif model_path == 'EXP':
+            model_path = DEFAULT_MODEL['FULL']
+
         if not os.path.exists(model_path):
             raise KomoranError("model does NOT exist!")
 
