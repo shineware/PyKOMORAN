@@ -31,7 +31,7 @@ def init_jvm(max_heap=1024, jar_path="./libs"):
         return
 
     libraries = [
-        '{0}{1}KOMORAN-3.3.4.jar',
+        '{0}{1}KOMORAN-4e7b5ef.jar',
         '{0}{1}KOMORANEntryPoint-0.1.0.jar',
         # '{0}{1}*'
     ]
