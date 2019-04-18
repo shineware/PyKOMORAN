@@ -30,11 +30,12 @@
   pip install PyKomoran
 ```
 
-* Or, just clone this repository and copy for use.
+* Or, just clone this repository and install by yourself.
 
-```bash
+```sh
   git clone https://github.com/shineware/PyKOMORAN
-  cp -r PyKOMORAN/python/PyKomoran [DEST_LOCATION_TO_YOUR_PROJECT]
+  cd PyKOMORAN/python
+  python setup.py install
 ```
 
 * Please refer to [installation document](https://pydocs.komoran.kr/firststep/installation.html?utm_source=PyPI&utm_medium=Referral&utm_campaign=PyKomoran) for detailed installation method.
