@@ -8,7 +8,7 @@
 __title__ = 'PyKomoran'
 __description__ = 'PyKomoran is Python wrapper for KOMORAN, KOrean MORphical ANalyzer.'
 __url__ = 'https://pydocs.komoran.kr'
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 __author__ = 'Junghwan Park, Junsoo Shin, Geunho Lee'
 __author_email__ = 'shineware.contact.form@gmail.com'
 __license__ = 'Apache 2.0'
