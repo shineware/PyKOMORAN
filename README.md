@@ -32,11 +32,12 @@
   pip install PyKomoran
 ```
 
-* 또는, 소스코드를 다운로드받아 설치할 수 있습니다.
+* 또는, 본 저장소를 다운로드받아 직접 설치할 수도 있습니다.
 
 ```sh
   git clone https://github.com/shineware/PyKOMORAN
-  cp -r PyKOMORAN/python/PyKomoran [사용하실 PROJECT 위치]
+  cd PyKOMORAN/python
+  python setup.py install
 ```
 
 * 자세한 설치 방법은 [KOMORAN 문서 사이트](https://pydocs.komoran.kr/firststep/installation.html?utm_source=GitHub&utm_medium=Referral&utm_campaign=PyKomoran)를 참고해주세요.
