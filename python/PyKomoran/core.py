@@ -48,7 +48,7 @@ class Komoran:
         elif model_path == 'EXP':
             model_path = DEFAULT_MODEL['FULL']
 
-        if not os.path.exists(model_path):
+        if not model_path in ('STABLE', 'EXP') and not os.path.exists(model_path):
             raise KomoranError("model does NOT exist!")
 
         self.pos_table = Pos()

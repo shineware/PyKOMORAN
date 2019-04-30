@@ -33,6 +33,7 @@ public class KomoranEntryPoint {
     public void KomoranEntryPoint() {
     }
 
+
     /**
      * 내부 <code>Komoran</code> 객체를 <code>modelPath</code>로 초기화합니다.
      *
@@ -42,6 +43,13 @@ public class KomoranEntryPoint {
      * @see         kr.co.shineware.nlp.komoran.core.Komoran
      */
     public void init(String modelPath) {
+        // USING DEFAULT MODEL
+        if ("STABLE".equals(modelPath) || "EXP".equals(modelPath)) {
+            this.initByModelName(modelPath);
+            return;
+        }
+
+        // CHECK MODEL PATH
         if (!new File(modelPath).exists()) {
             return;
         }
@@ -54,6 +62,7 @@ public class KomoranEntryPoint {
             // FileNotFoundException => Invalid model path
         }
     }
+
 
     /**
      * 내부 <code>Komoran</code> 객체가 초기화되었는지 확인합니다.
@@ -69,9 +78,10 @@ public class KomoranEntryPoint {
         return false;
     }
 
+
     /**
      * 내부 <code>Komoran</code> 객체를 기본 <code>modelType</code> 초기화합니다.
-     * <code>modelType</code> KOMORAN의 DEFAULT_MODEL 타입입니다.
+     * <code>modelType</code>은 KOMORAN의 DEFAULT_MODEL 타입입니다.
      *
      * @param       modelType DEFAULT_MODEL 종류
      * @see         kr.co.shineware.nlp.komoran.core.Komoran
@@ -79,6 +89,28 @@ public class KomoranEntryPoint {
     public void initByModel(DEFAULT_MODEL modelType) {
         komoran = new Komoran(modelType);
     }
+
+
+    /**
+     * 내부 <code>Komoran</code> 객체를 기본 <code>modelTypeName</code> 초기화합니다.
+     * <code>modelTypeName</code>은 KOMORAN의 DEFAULT_MODEL의 이름입니다.
+     *
+     * @param       modelTypeName DEFAULT_MODEL의 이름
+     * @see         kr.co.shineware.nlp.komoran.core.Komoran
+     */
+    public void initByModelName(String modelTypeName) {
+        switch (modelTypeName) {
+            case "STABLE":
+                komoran = new Komoran(DEFAULT_MODEL.LIGHT);
+                break;
+            case "EXP":
+                komoran = new Komoran(DEFAULT_MODEL.FULL);
+                break;
+            default:
+                // TODO: throw ModelNotFoundException
+        }
+    }
+
 
     /**
      * 내부 <code>Komoran</code> 객체에 사용자 사전을 적용합니다.
@@ -89,6 +121,7 @@ public class KomoranEntryPoint {
         komoran.setUserDic(userDicPath);
     }
 
+
     /**
      * 내부 <code>Komoran</code> 객체에 기분석 사전을 적용합니다.
      *
@@ -97,6 +130,7 @@ public class KomoranEntryPoint {
     public void setFWDic(String fwDicPath) {
         komoran.setFWDic(fwDicPath);
     }
+
 
     /**
      * 내부 <code>Komoran</code> 객체에 주어진 sentence를 분석하여 내부 <code>KomoranResult</code> 객체에 저장합니다.
@@ -108,6 +142,7 @@ public class KomoranEntryPoint {
         result = komoran.analyze(sentence);
     }
 
+
     /**
      * 내부 <code>KomoranResult</code> 객체로부터 명사류의 형태소만 반환받습니다.
      *
@@ -117,6 +152,7 @@ public class KomoranEntryPoint {
     public List<String> getNouns() {
         return result.getNouns();
     }
+
 
     /**
      * 내부 <code>KomoranResult</code> 객체로부터 주어진 품사의 형태소들만 반환받습니다.
@@ -129,6 +165,7 @@ public class KomoranEntryPoint {
         return result.getMorphesByTags(targetPosCollection);
     }
 
+
     /**
      * 내부 <code>KomoranResult</code> 객체로부터 PlainText 형태의 분석 결과를 반환받습니다.
      *
@@ -138,6 +175,7 @@ public class KomoranEntryPoint {
     public String getPlainText() {
         return result.getPlainText();
     }
+
 
     /**
      * 내부 <code>KomoranResult</code> 객체로부터 분석 결과를 <code>Token</code> 형태로 반환받습니다.
@@ -155,6 +193,7 @@ public class KomoranEntryPoint {
         // @formatter:on
     }
 
+
     /**
      * 내부 <code>KomoranResult</code> 객체로부터 분석 결과를 <code>Pair</code> 형태로 반환받습니다.
      * Python에서 이용할 수 있도록 <code>Pair</code> 객체는 Map 객체로 변환하여 제공합니다.
@@ -171,6 +210,7 @@ public class KomoranEntryPoint {
         // @formatter:on
     }
 
+
     /**
      * <code>Token</code> 객체를 Python에서 이용할 수 있도록 각 Key를 이름으로 갖는 Map 객체로 변환합니다.
      *
@@ -186,6 +226,7 @@ public class KomoranEntryPoint {
         }};
     }
 
+
     /**
      * <code>Pair</code> 객체를 Python에서 이용할 수 있도록 각 Key를 이름으로 갖는 Map 객체로 변환합니다.
      *
@@ -198,6 +239,7 @@ public class KomoranEntryPoint {
             put("second", pair.getSecond().toString());
         }};
     }
+
 
     /**
      * 직접 실행 시 Py4J의 GatewayServer를 실행합니다.

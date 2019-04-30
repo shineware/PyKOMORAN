@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 group = 'kr.co.shineware.nlp.pykomoran'
-version = '0.1.0'
+version = '0.1.6'
 sourceCompatibility = '1.8'
 
 repositories {
