@@ -252,8 +252,6 @@ class DefaultModel:
         base_path = os.path.dirname(os.path.realpath(__file__))
 
         self._models = {
-            # 'FULL': '{0}{1}models_full'.format(base_path, os.sep),
-            # 'LIGHT': "{0}{1}models_light".format(base_path, os.sep)
             'FULL': 'EXP',
             'LIGHT': 'STABLE'
         }

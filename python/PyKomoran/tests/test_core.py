@@ -9,9 +9,35 @@ str_to_analyze = "① 대한민국은 민주공화국이다. ② 대한민국의
 komoran = None
 
 
-def test_to_init_Komoran():
+def test_to_init_Komoran_default_stable():
     """
-    Core Test: init Komoran with default model (models_light)
+    Core Test: init Komoran with default model (STABLE)
+    :return:
+    """
+    global komoran
+
+    komoran = Komoran("STABLE")
+
+    assert komoran is not None
+    assert komoran._komoran.isInitialized()
+
+
+def test_to_init_Komoran_default_exp():
+    """
+    Core Test: init Komoran with default model (EXP)
+    :return:
+    """
+    global komoran
+
+    komoran = Komoran("EXP")
+
+    assert komoran is not None
+    assert komoran._komoran.isInitialized()
+
+
+def test_to_init_Komoran_default_stable_old_way():
+    """
+    Core Test: init Komoran with default model (STABLE)
     :return:
     """
     global komoran
@@ -22,9 +48,9 @@ def test_to_init_Komoran():
     assert komoran._komoran.isInitialized()
 
 
-def test_to_init_Komoran():
+def test_to_init_Komoran_default_exp_old_way():
     """
-    Core Test: init Komoran with default model (models_full)
+    Core Test: init Komoran with default model (EXP)
     :return:
     """
     global komoran
@@ -33,6 +59,7 @@ def test_to_init_Komoran():
 
     assert komoran is not None
     assert komoran._komoran.isInitialized()
+
 
 
 def test_to_analyze_get_nouns():
@@ -322,7 +349,7 @@ def test_to_set_user_dic():
     global komoran
 
     if komoran is None:
-        komoran = Komoran(DEFAULT_MODEL['FULL'])
+        komoran = Komoran("EXP")
 
     tokens = komoran.get_token_list("테스트 단어")
 
@@ -373,7 +400,7 @@ def test_to_set_fw_dic():
     global komoran
 
     if komoran is None:
-        komoran = Komoran(DEFAULT_MODEL['LIGHT'])
+        komoran = Komoran("STABLE")
 
     tokens = komoran.get_token_list("눈이 감겼다")
 

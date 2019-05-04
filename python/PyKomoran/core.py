@@ -27,13 +27,13 @@ class Komoran:
         max_heap (int): JVM의 Max Heap Size (기본값: ``1024``, 단위: ``MB``)
 
     Examples:
-        기본 모델( ``DEFAULT_MODEL['FULL']`` , ``DEFAULT_MODEL['LIGHT']`` ) 외에 사용자가 직접 생성한 모델이 위치하는
+        기본 모델( ``STABLE`` , ``EXP`` ) 외에 사용자가 직접 생성한 모델이 위치하는
         ``절대 경로`` 를 이용하여 Komoran 객체를 생성할 수 있습니다.
 
         >>> # 기본으로 제공하는 LIGHT 모델로 Komoran 객체를 생성합니다.
-        >>> komoran = Komoran(DEFAULT_MODEL['LIGHT'])
+        >>> komoran = Komoran("STABLE")
         >>> # 기본으로 제공하는 FULL 모델로 Komoran 객체를 생성합니다.
-        >>> komoran = Komoran(DEFAULT_MODEL['FULL'])
+        >>> komoran = Komoran("EXP")
         >>> # 사용자가 미리 생성 모델로 Komoran 객체를 생성합니다.
         >>> komoran_user = Komoran("/some/where/path/Komoran/Model")
 
@@ -42,11 +42,6 @@ class Komoran:
     def __init__(self, model_path, max_heap=1024):
         if max_heap <= 0:
             raise KomoranError("Heap size for JVM is too small!")
-
-        if model_path == 'STABLE':
-            model_path = DEFAULT_MODEL['LIGHT']
-        elif model_path == 'EXP':
-            model_path = DEFAULT_MODEL['FULL']
 
         if not model_path in ('STABLE', 'EXP') and not os.path.exists(model_path):
             raise KomoranError("model does NOT exist!")
@@ -295,7 +290,7 @@ class Komoran:
 
 
 if __name__ == '__main__':
-    komoran = Komoran(DEFAULT_MODEL['FULL'])
+    komoran = Komoran("EXP")
     str_to_analyze = "① 대한민국은 민주공화국이다. ② 대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다."
 
     print(komoran.get_nouns(str_to_analyze))
