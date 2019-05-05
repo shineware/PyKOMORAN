@@ -3,3 +3,5 @@ sphinx-rtd-theme==0.4.2
 sphinx-sitemap==1.0.2
 sphinxcontrib-napoleon
 javasphinx==0.9.15
+py4j==0.10.8.1
+PyKomoran

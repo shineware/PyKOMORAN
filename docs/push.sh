@@ -3,7 +3,7 @@
 
 # Fill this out with the correct org/repo
 ORG=shineware
-REPO=KOMORANDocs
+REPO=PyKOMORAN
 # This probably should match an email for one of your users.
 EMAIL=reserve.dev@gmail.com
 
@@ -22,11 +22,11 @@ if [ "$1" != "dry" ]; then
 fi
 
 # Copy in the HTML.  You may want to change this with your documentation path.
-cp -R ../$REPO/_build/html/* ./
+cp -R ../docs/_build/html/* ./
 
 # Add and commit changes.
 git add -A .
-git commit -m "[ci skip] Autodoc commit for $COMMIT."
+git commit -m "Rebuild PyDocs"
 if [ "$1" != "dry" ]; then
     # -q is very important, otherwise you leak your GH_TOKEN
     git push -q origin gh-pages

@@ -1,0 +1,22 @@
+language: python
+python:
+  - 3.6
+
+addons:
+  apt:
+    packages:
+      - openjdk-8-jre-headless
+
+install:
+  - cd docs
+  - pip install -r requirements.txt
+
+script:
+  - make html
+
+after_success:
+  - "./push.sh"
+
+env:
+  global:
+  - secure: N4QQF1URC8TFmhwFvC/FXFL51/YdIi51cdPBIA+6zol9XT2T0QuV2fo9LCWECI3dTfHd5umHa9lfofwSvX208bqQ+EHGi4sxsM6isizxVK1+oD4phBPtj5cvpPHzK9rKwn9mSZxGJLOEcwcOAzfnb5IsJ9AVseJ+nYV1wOsGC8f6rMN+ieipjgnHNeNRS+dGaP2Q9JnklRut8M7DS9zcokPvp9FE/6L17NLpdMtESEWi+TEO1B3SYD9OF3+a63FRB4zFot4UFx/zTz+pW+a45qZd24iS1bTGI1VyF+n8wB/zx2TubUoIFpFPBA5jr9QMoqaerl0baElW8W6a+62nYcAt9whaJEd/YiEAdb3fopzFGSOsC7L8Dt7TrY6tUWD5y4GtbIlImR40OHb8sNNPfWAK63sM829Vq/R3WUIRLe/fOEZTYkST2pyXFXXHkItsW34W0iZ+jJNqwZVg4ADtxj6mgTG7Io/nODIfp8A34J7KCV6o0PucYcaOzfAp9NI39O5EritaZx6fIS5jfDvk09kBeE3LJfXQ+tOeeRzkisQiLvOddd1EPE/qanDzczDk36IbcCZA24xI5VRizB40QSlY9I32EeujD4o+zqqYLYMP/15cUBCCzVOU716pp83+01KyeJ8+zojaZUK63Cnv5MzMxqwAEYoorsJO30a/oqI=
