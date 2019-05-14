@@ -2,9 +2,9 @@
 
 ## 소개
 
-https://docs.komoran.kr
+[https://pydocs.komoran.kr](https://pydocs.komoran.kr)
 
-* 이 저장소는 [KOMORAN 문서와 튜토리얼 등을 위한 정적 사이트(Static site)](https://docs.komoran.kr)를 생성/관리하기 위해 만들었습니다.
+* 이 저장소는 [KOMORAN 문서와 튜토리얼 등을 위한 정적 사이트(Static site)](https://pydocs.komoran.kr)를 생성/관리하기 위해 만들었습니다.
 * [Sphinx](http://www.sphinx-doc.org/en/master/)과 [GitHub Pages](https://pages.github.com/)를 이용하고 있습니다.
 
 ## 실행하기
@@ -17,11 +17,12 @@ https://docs.komoran.kr
 * pip (for Python 3.x)
 
 ### 저장소 복제
+
 먼저 저장소를 복제합니다. Git 사용법은 [여기](https://git-scm.com/book/ko/)를 참고해주시기 바랍니다.
 
 ```sh
-  git clone https://github.com/shineware/KOMORANDocs
-  cd docs
+  git clone https://github.com/shineware/PyKOMORAN
+  cd PyKOMORAN/docs
 ```
 
 ### 의존성 설치
