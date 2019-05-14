@@ -19,6 +19,7 @@
 
 * To use PyKomoran, the following requirements must be installed
   * Java 8+ JDK Environment
+    * We recommend you use OracleJDK / OpenJDK.
   * Python 3.4+
     * We recommend you use Python 3.4 or higher.
   * [Py4J](https://www.py4j.org/install.html), 0.10 (or higher)
@@ -50,7 +51,7 @@
 
 ```python
   from PyKomoran import *
-  komoran = Komoran(DEFAULT_MODEL['LIGHT'])
+  komoran = Komoran("STABLE")
 ```
 
 * After then, run analyzing method.

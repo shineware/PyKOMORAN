@@ -19,6 +19,7 @@
 
 * PyKomoran을 이용하기 위해서는 다음의 요구사항이 설치되어 있어야 합니다.
   * Java 8 이상의 JDK 환경
+    * OracleJDK 또는 OpenJDK를 권장합니다.
   * Python 3.4 이상
     * Python 3.4 이상을 지원합니다.
   * [Py4J](https://www.py4j.org/install.html), 0.10 이상
@@ -50,7 +51,7 @@
 
 ```python
   from PyKomoran import *
-  komoran = Komoran(DEFAULT_MODEL['LIGHT'])
+  komoran = Komoran("STABLE")
 ```
 
 * 분석 메소드를 이용하여 문장을 분석합니다.
