@@ -72,6 +72,14 @@ Java과 R에서 KOMORAN을 사용할 수 있습니다.
 
 .. toctree::
    :maxdepth: 2
+   :caption: PyKOMORAN 사용하기
+   :name: usage
+
+   /usage/default-models
+
+
+.. toctree::
+   :maxdepth: 2
    :caption: API 소개
    :name: api
 

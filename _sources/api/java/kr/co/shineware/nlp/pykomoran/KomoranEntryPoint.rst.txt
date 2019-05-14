@@ -137,9 +137,21 @@ initByModel
 .. java:method:: public void initByModel(DEFAULT_MODEL modelType)
    :outertype: KomoranEntryPoint
 
-   내부 \ ``Komoran``\  객체를 기본 \ ``modelType``\  초기화합니다. \ ``modelType``\  KOMORAN의 DEFAULT_MODEL 타입입니다.
+   내부 \ ``Komoran``\  객체를 기본 \ ``modelType``\  초기화합니다. \ ``modelType``\ 은 KOMORAN의 DEFAULT_MODEL 타입입니다.
 
    :param modelType: DEFAULT_MODEL 종류
+
+   **See also:** :java:ref:`kr.co.shineware.nlp.komoran.core.Komoran`
+
+initByModelName
+^^^^^^^^^^^^^^^
+
+.. java:method:: public void initByModelName(String modelTypeName)
+   :outertype: KomoranEntryPoint
+
+   내부 \ ``Komoran``\  객체를 기본 \ ``modelTypeName``\  초기화합니다. \ ``modelTypeName``\ 은 KOMORAN의 DEFAULT_MODEL의 이름입니다.
+
+   :param modelTypeName: DEFAULT_MODEL의 이름
 
    **See also:** :java:ref:`kr.co.shineware.nlp.komoran.core.Komoran`
 
