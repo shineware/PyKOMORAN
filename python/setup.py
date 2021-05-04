@@ -16,7 +16,7 @@ setup_requires = [
 ]
 
 install_requires = [
-    'py4j==0.10.8.1',
+    'py4j==0.10.9.2',
 ]
 
 tests_require = [

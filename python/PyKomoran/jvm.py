@@ -31,13 +31,13 @@ def init_jvm(max_heap=1024, jar_path="./libs"):
         return
 
     libraries = [
-        '{0}{1}KOMORAN-4e7b5ef.jar',
+        '{0}{1}KOMORAN-3.3.9.jar',
         '{0}{1}KOMORANEntryPoint-0.1.6.jar',
         # '{0}{1}*'
     ]
 
     classpath = os.pathsep.join([lib.format(jar_path, os.sep) for lib in libraries])
-    py4j_path = "{0}{1}py4j0.10.8.1.jar".format(jar_path, os.sep)
+    py4j_path = "{0}{1}py4j-0.10.9.2.jar".format(jar_path, os.sep)
 
     port = launch_gateway(jarpath=py4j_path,
                           classpath=classpath,

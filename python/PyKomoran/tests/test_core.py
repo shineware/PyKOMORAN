@@ -151,7 +151,7 @@ def test_to_analyze_get_plain_text():
 
     assert isinstance(plain_text, str)
     assert len(plain_text) == 156
-    assert plain_text == '①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF ②/SW 대한민국/NNP 의/JKG 주권/NNP 은/JX ' \
+    assert plain_text == '①/SW 대한민국/NNP 은/JX 민주공화국/NNP 이/VCP 다/EF ./SF ②/SW 대한민국/NNP 의/JKG 주권/NNG 은/JX ' \
                          '국민/NNG 에게/JKB 있/VV 고/EC ,/SP 모든/MM 권력/NNG 은/JX 국민/NNG 으로부터/JKB 나오/VV ㄴ다/EF ./SF'
 
 
@@ -359,7 +359,7 @@ def test_to_set_user_dic():
     assert isinstance(tokens[0], Token)
     assert tokens[0] == Token({
                             'morph': '테스트',
-                            'pos': 'NNP',
+                            'pos': 'NNG',
                             'beginIndex': 0,
                             'endIndex': 3
                         })
