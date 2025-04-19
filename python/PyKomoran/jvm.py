@@ -39,10 +39,17 @@ def init_jvm(max_heap=1024, jar_path="./libs"):
     classpath = os.pathsep.join([lib.format(jar_path, os.sep) for lib in libraries])
     py4j_path = "{0}{1}py4j-0.10.9.2.jar".format(jar_path, os.sep)
 
-    port = launch_gateway(jarpath=py4j_path,
-                          classpath=classpath,
-                          javaopts=['-Dfile.encoding=UTF8', '-ea', '-Xmx{}m'.format(max_heap)],
-                          die_on_exit=True)
+    port = launch_gateway(
+        jarpath=py4j_path,
+        classpath=classpath,
+        javaopts=[
+            '-Dfile.encoding=UTF8',
+            '-ea',
+            '-Xmx{}m'.format(max_heap),
+            '--add-opens', 'java.base/java.util=ALL-UNNAMED'
+        ],
+        die_on_exit=True
+    )
 
     logging.debug("initializing JVM... ")
     try:
